@@ -7,7 +7,7 @@ package com.holddie.leetcode;
  * @email holddie@163.com
  * @date 2018/12/5 10:31 AM
  */
-public class LT003 {
+public class Lc003 {
 
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();

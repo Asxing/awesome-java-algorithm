@@ -9,7 +9,7 @@ import java.util.Map;
  * @email holddie@163.com
  * @date 2018/12/4 9:31 PM
  */
-public class LT001 {
+public class Lc001 {
 
     // method one
     public int[] twoSum(int[] nums, int target) {

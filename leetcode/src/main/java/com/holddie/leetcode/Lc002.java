@@ -7,7 +7,7 @@ package com.holddie.leetcode;
  * @email holddie@163.com
  * @date 2018/12/4 11:27 PM
  */
-public class LT002 {
+public class Lc002 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode retNode = new ListNode(0);
         ListNode p = l1, q = l2, curr = retNode;
