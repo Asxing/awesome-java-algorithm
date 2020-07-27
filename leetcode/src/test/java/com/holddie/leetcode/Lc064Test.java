@@ -1,5 +1,7 @@
 package com.holddie.leetcode;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,12 +10,12 @@ class Lc064Test {
 
 	private Lc064 lc064UnderTest;
 
-	@org.junit.jupiter.api.BeforeEach
+	@BeforeEach
 	void setUp() {
 		lc064UnderTest = new Lc064();
 	}
 
-	@org.junit.jupiter.api.AfterEach
+	@AfterEach
 	void tearDown() {
 	}
 
