@@ -30,8 +30,6 @@ public class Lc002 {
         }
         return retNode.next;
     }
-
-
 }
 
 class ListNode {
