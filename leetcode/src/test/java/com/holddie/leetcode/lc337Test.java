@@ -1,5 +1,7 @@
-package com.holddie.leetcode.lc337;
+package com.holddie.leetcode;
 
+import com.holddie.leetcode.TreeNode;
+import com.holddie.leetcode.lc337;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

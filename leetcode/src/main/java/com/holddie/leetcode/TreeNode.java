@@ -1,4 +1,4 @@
-package com.holddie.leetcode.lc337;
+package com.holddie.leetcode;
 
 public class TreeNode {
     int val;
