@@ -4,6 +4,7 @@ import lombok.Data;
 
 /**
  * 合并两个排序的链表
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -13,6 +14,7 @@ public class No25 {
 
     /**
      * 递归方法合并链表
+     *
      * @param list1 链表1
      * @param list2 链表2
      * @return ListNode
@@ -38,6 +40,7 @@ public class No25 {
 
     /**
      * 迭代合并两个有序链表
+     *
      * @param list1 链表1
      * @param list2 链表2
      * @return ListNode
@@ -69,7 +72,6 @@ public class No25 {
         return head.next;
     }
 
-
     public static void main(String[] args) {
 
         ListNode node1 = new ListNode(12);
@@ -88,10 +90,9 @@ public class No25 {
         node6.setNext(node7);
 
         No25 no25 = new No25();
-//        System.out.println(no25.MergeRecursive(node1, node5));
+        //        System.out.println(no25.MergeRecursive(node1, node5));
         System.out.println(no25.MergeIterative(node1, node5));
     }
-
 
     @Data
     static class ListNode {

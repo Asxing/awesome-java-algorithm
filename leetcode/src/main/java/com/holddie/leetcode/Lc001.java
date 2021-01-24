@@ -16,7 +16,7 @@ public class Lc001 {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
+                    return new int[] {i, j};
                 }
             }
         }
@@ -32,7 +32,7 @@ public class Lc001 {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement) && map.get(complement) != i) {
-                return new int[]{complement, nums[i]};
+                return new int[] {complement, nums[i]};
             }
         }
         throw new IllegalArgumentException("No two sum solution");
@@ -44,7 +44,7 @@ public class Lc001 {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement)) {
-                return new int[]{complement, nums[i]};
+                return new int[] {complement, nums[i]};
             } else {
                 map.put(nums[i], i);
             }
@@ -52,8 +52,5 @@ public class Lc001 {
         throw new IllegalArgumentException("No two sum solution");
     }
 
-
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {}
 }

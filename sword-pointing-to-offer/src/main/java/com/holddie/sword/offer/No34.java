@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 /**
  * 二叉树中和为某一值的路径
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -12,13 +13,8 @@ import java.util.Arrays;
  */
 public class No34 {
 
-    /**
-     * 题目描述：
-     * 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。
-     * 路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
-     */
+    /** 题目描述： 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。 路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。 */
     private ArrayList<ArrayList<Integer>> ret = new ArrayList<ArrayList<Integer>>();
-
 
     public ArrayList<ArrayList<Integer>> findPath(TreeNode root, int target) {
         backtracking(root, target, new ArrayList<Integer>());

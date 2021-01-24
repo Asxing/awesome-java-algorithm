@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 二叉树子节点镜像
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -11,6 +12,7 @@ public class No27 {
 
     /**
      * 递归思想
+     *
      * @param root 根节点
      * @author HoldDie
      * @email HoldDie@163.com
@@ -32,7 +34,6 @@ public class No27 {
         root.right = tmpNode;
     }
 
-
     public static void main(String[] args) {
 
         No27 no27 = new No27();
@@ -51,7 +52,5 @@ public class No27 {
         System.out.println(treeNode1);
         no27.Mirror(treeNode1);
         System.out.println(treeNode1);
-
     }
-
 }

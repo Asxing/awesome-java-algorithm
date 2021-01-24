@@ -1,6 +1,5 @@
 package com.holddie.leetCode;
 
-
 /**
  * 二叉树的最小深度
  *
@@ -9,7 +8,6 @@ package com.holddie.leetCode;
  */
 public class MinDepth {
     /**
-     *
      * @param root 二叉树
      * @return 最小深度
      */
@@ -27,7 +25,6 @@ public class MinDepth {
         }
         return Math.min(left, right) + 1;
     }
-
 
     private static class TreeNode {
         int val;

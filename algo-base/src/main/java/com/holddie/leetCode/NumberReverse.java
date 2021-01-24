@@ -1,16 +1,14 @@
 package com.holddie.leetCode;
 
 /**
- * 整数反转
- * 各种回文
+ * 整数反转 各种回文
  *
  * @author liuchao
  * @date 2019/5/22
  */
 public class NumberReverse {
     /**
-     * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
-     * 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。
+     * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。 32 位的有符号整数，则其数值范围为 [−231, 231 − 1]。
      * 请根据这个假设，如果反转后整数溢出那么就返回 0。
      *
      * @param x 传入整数
@@ -32,8 +30,7 @@ public class NumberReverse {
     }
 
     /**
-     * 判断是否是回文数
-     * 并且不将其转成字符串
+     * 判断是否是回文数 并且不将其转成字符串
      *
      * @param x 传入整数
      * @return 返回结果
@@ -49,8 +46,8 @@ public class NumberReverse {
     }
 
     /**
-     * 判断链表是否回文
-     * 快慢指针法
+     * 判断链表是否回文 快慢指针法
+     *
      * @param head 链表
      * @return 返回值
      */
@@ -60,21 +57,21 @@ public class NumberReverse {
         }
         ListNode slow = head;
         ListNode fast = head;
-        while (null != fast.next && null != fast.next.next){
+        while (null != fast.next && null != fast.next.next) {
             slow = slow.next;
             fast = fast.next.next;
         }
         slow = slow.next;
         ListNode prev = null;
-        while (null != slow){
+        while (null != slow) {
             ListNode next = slow.next;
             slow.next = prev;
             prev = slow;
             slow = next;
         }
-        while (null != prev){
-            if (head.val != prev.val){
-                return  false;
+        while (null != prev) {
+            if (head.val != prev.val) {
+                return false;
             }
             head = head.next;
             prev = prev.next;
@@ -85,15 +82,16 @@ public class NumberReverse {
     private class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
         }
     }
 
     public static void main(String[] args) {
-        //max = 2147483647
+        // max = 2147483647
         int max = Integer.MAX_VALUE;
-        //min = -2147483648
+        // min = -2147483648
         int min = Integer.MIN_VALUE;
         System.out.println(reverse(max));
         System.out.println(reverse(min));

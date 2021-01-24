@@ -2,14 +2,10 @@ package com.holddie.e10_tree;
 
 import java.util.*;
 
-/**
- * 多模式串匹配算法-AC自动机
- */
+/** 多模式串匹配算法-AC自动机 */
 public class AhoCorasick {
 
-    /**
-     * 根节点
-     */
+    /** 根节点 */
     private AcNode root;
 
     private AhoCorasick() {
@@ -34,9 +30,7 @@ public class AhoCorasick {
         p.isEndingChar = true;
     }
 
-    /**
-     * 构建失败指针
-     */
+    /** 构建失败指针 */
     private void buildFailurePointer() {
         Queue<AcNode> queue = new LinkedList<>();
         root.fail = null;
@@ -80,7 +74,7 @@ public class AhoCorasick {
                 p = p.fail;
             }
             p = p.children.get(c);
-            //如果没有匹配，从root重新开始
+            // 如果没有匹配，从root重新开始
             if (null == p) p = root;
             AcNode temp = p;
             while (temp != root) {
@@ -93,11 +87,9 @@ public class AhoCorasick {
         return false;
     }
 
-    /**
-     * 构建敏感词trie树
-     */
+    /** 构建敏感词trie树 */
     private void generate() {
-        String[] strs = new String[]{"so", "hel", "oh", "llo"};
+        String[] strs = new String[] {"so", "hel", "oh", "llo"};
         for (String str : strs) {
             insert(str);
         }
@@ -121,7 +113,7 @@ public class AhoCorasick {
                 strs[i] = "****";
             } else {
                 boolean res = ac.match(strs[i]);
-                //如果匹配到，将其替换成****
+                // 如果匹配到，将其替换成****
                 if (res) {
                     mapCache.put(strs[i], 1);
                     strs[i] = "****";
@@ -135,23 +127,14 @@ public class AhoCorasick {
         }
     }
 
-
     private class AcNode {
-        /**
-         * 字符
-         */
+        /** 字符 */
         public char data;
-        /**
-         * 子节点
-         */
+        /** 子节点 */
         Map<Character, AcNode> children;
-        /**
-         * 结束标识
-         */
+        /** 结束标识 */
         boolean isEndingChar;
-        /**
-         * 失败指针
-         */
+        /** 失败指针 */
         AcNode fail;
 
         AcNode(char data) {

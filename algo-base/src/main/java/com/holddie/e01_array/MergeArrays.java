@@ -11,9 +11,9 @@ public class MergeArrays {
      * 方法1
      *
      * @param array1 数组1
-     * @param m      数组1的大小
+     * @param m 数组1的大小
      * @param array2 数组2
-     * @param n      数组2 的大小
+     * @param n 数组2 的大小
      * @return
      */
     public int[] merge1(int[] array1, int m, int[] array2, int n) {
@@ -107,8 +107,8 @@ public class MergeArrays {
 
     public static void main(String[] args) {
         MergeArrays mergeArrays = new MergeArrays();
-//		int[] array1 = { 1, 2, 3};
-//		int m = array1.length;
+        //		int[] array1 = { 1, 2, 3};
+        //		int m = array1.length;
         int[] array1 = new int[6];
         array1[0] = 1;
         array1[1] = 2;
@@ -116,10 +116,9 @@ public class MergeArrays {
         int m = 3;
         int[] array2 = {4, 5, 6};
         int n = array2.length;
-//		int[] arrays = mergeArrays.merge1(array1, m, array2, n)(array1, m, array2, n);
-//		int[] arrays = mergeArrays.merge2(array1, m, array2, n)(array1, m, array2, n);
+        //		int[] arrays = mergeArrays.merge1(array1, m, array2, n)(array1, m, array2, n);
+        //		int[] arrays = mergeArrays.merge2(array1, m, array2, n)(array1, m, array2, n);
         int[] arrays = mergeArrays.mergeOpt2(array1, m, array2, n);
         mergeArrays.print(arrays);
-
     }
 }

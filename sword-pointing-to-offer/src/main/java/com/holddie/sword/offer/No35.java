@@ -4,6 +4,7 @@ import lombok.Data;
 
 /**
  * 链表的复制
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -64,8 +65,6 @@ public class No35 {
         No35 no35 = new No35();
         System.out.println(no35.Clone(node1));
     }
-
-
 }
 
 @Data
@@ -83,9 +82,6 @@ class RandomListNode {
 
     @Override
     public String toString() {
-        return "RandomListNode{" +
-                "lable=" + lable +
-                ", next=" + next +
-                '}';
+        return "RandomListNode{" + "lable=" + lable + ", next=" + next + '}';
     }
 }

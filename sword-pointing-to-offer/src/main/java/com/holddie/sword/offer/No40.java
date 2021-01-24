@@ -3,9 +3,8 @@ package com.holddie.sword.offer;
 import java.util.ArrayList;
 
 /**
- * 输入n个整数，找出其中最小的K个数。例如
- * 输入4,5,1,6,2,7,3,8这8个数字，则最小
- * 的4个数字是1,2,3,4,。
+ * 输入n个整数，找出其中最小的K个数。例如 输入4,5,1,6,2,7,3,8这8个数字，则最小 的4个数字是1,2,3,4,。
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -62,7 +61,6 @@ public class No40 {
         nums[i] = nums[j];
         nums[j] = t;
     }
-
 
     public static void main(String[] args) {
         No40 no40 = new No40();

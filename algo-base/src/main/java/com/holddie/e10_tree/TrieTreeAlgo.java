@@ -5,18 +5,12 @@ import java.util.Map;
 
 public class TrieTreeAlgo {
 
-    /**
-     * 根节点
-     */
+    /** 根节点 */
     private TrieNode root;
-    /**
-     * 计数
-     */
+    /** 计数 */
     private int count;
 
-    /**
-     * 无参构造方法
-     */
+    /** 无参构造方法 */
     private TrieTreeAlgo() {
         root = new TrieNode('/');
         count = 0;
@@ -80,19 +74,13 @@ public class TrieTreeAlgo {
     }
 
     private class TrieNode {
-        /**
-         * 字符
-         */
+        /** 字符 */
         public char data;
-        /**
-         * 出现频率
-         */
+        /** 出现频率 */
         int frequency;
 
         boolean isEndingChar;
-        /**
-         * 子节点
-         */
+        /** 子节点 */
         Map<Character, TrieNode> children;
 
         TrieNode(char data) {
@@ -101,5 +89,4 @@ public class TrieTreeAlgo {
             isEndingChar = false;
         }
     }
-
 }

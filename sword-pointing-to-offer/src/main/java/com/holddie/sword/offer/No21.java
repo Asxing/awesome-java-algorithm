@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 调整数组顺序使奇数位于偶数前面
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -14,16 +15,14 @@ public class No21 {
     public int[] reOrderArray(int[] nums) {
         // 奇数个数
         int oddCount = 0;
-        for (int val :
-                nums) {
+        for (int val : nums) {
             if (val % 2 == 0) {
                 oddCount++;
             }
         }
         int[] copy = nums.clone();
         int i = 0, j = oddCount;
-        for (int num :
-                copy) {
+        for (int num : copy) {
             if (num % 2 == 1) {
                 nums[i++] = num;
             } else {

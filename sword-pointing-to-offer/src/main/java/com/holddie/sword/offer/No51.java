@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 数组中的逆序对
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -50,8 +51,7 @@ public class No51 {
 
     public static void main(String[] args) {
         No51 no51 = new No51();
-        int[] nums = new int[]{1, 2, 0};
+        int[] nums = new int[] {1, 2, 0};
         System.out.println(no51.inversepairs(nums));
     }
-
 }

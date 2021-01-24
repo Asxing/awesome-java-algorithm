@@ -1,25 +1,15 @@
 package com.holddie.e02_linkedlist;
 
-/**
- * 循环链表
- */
+/** 循环链表 */
 public class CircleLinkList {
-    /**
-     * 头结点
-     */
+    /** 头结点 */
     private Node head;
-    /**
-     * 尾结点
-     */
+    /** 尾结点 */
     private Node tail;
-    /**
-     * 数据数量
-     */
+    /** 数据数量 */
     private int count;
 
-    /**
-     * 无参构造方法
-     */
+    /** 无参构造方法 */
     private CircleLinkList() {
         head = null;
         tail = null;
@@ -48,7 +38,7 @@ public class CircleLinkList {
      * 插入指定位置
      *
      * @param index 索引
-     * @param data  数据
+     * @param data 数据
      */
     private void insertByIndex(int index, int data) {
         if (index > count) {
@@ -102,7 +92,7 @@ public class CircleLinkList {
                 tail.next = head;
             }
         } else {
-            Node resNode = findByIndex(index - 1);//查找该节点的前一个节点
+            Node resNode = findByIndex(index - 1); // 查找该节点的前一个节点
             if (null != resNode) {
                 System.out.println("返回节点的值:" + resNode.data);
                 resNode.next = resNode.next.next;
@@ -130,7 +120,7 @@ public class CircleLinkList {
 
     private void printAll() {
         Node p = head;
-        int flag = p.data;//跳出标识
+        int flag = p.data; // 跳出标识
         while (null != p) {
             System.out.print(p.data + " ");
             p = p.next;

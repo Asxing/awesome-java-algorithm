@@ -6,9 +6,7 @@ package com.holddie.e02_linkedlist;
  * @author mic
  */
 public class SinglyLinkedList {
-    /**
-     * 声明一个头节点
-     */
+    /** 声明一个头节点 */
     public Node head;
 
     /**
@@ -39,8 +37,7 @@ public class SinglyLinkedList {
      * @param value
      */
     public void deleteByNode(int value) {
-        if (head == null)
-            return;
+        if (head == null) return;
         Node p = head;
         Node q = null;
         // 从链表中找到要删除的value
@@ -48,8 +45,7 @@ public class SinglyLinkedList {
             q = p;
             p = p.next;
         }
-        if (p == null)
-            return;
+        if (p == null) return;
         if (q == null) {
             head = head.next;
         } else {

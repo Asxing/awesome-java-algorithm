@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 股票的最大利润
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,11 +10,7 @@ package com.holddie.sword.offer;
  */
 public class No63 {
 
-
-    /**
-     * 题目描述：
-     * 可以有一次买入和卖出，买入必须在前，求最大利润。
-     */
+    /** 题目描述： 可以有一次买入和卖出，买入必须在前，求最大利润。 */
     private int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
@@ -32,8 +29,6 @@ public class No63 {
 
     public static void main(String[] args) {
         No63 no63 = new No63();
-        System.out.println(no63.maxProfit(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}));
+        System.out.println(no63.maxProfit(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9}));
     }
-
-
 }

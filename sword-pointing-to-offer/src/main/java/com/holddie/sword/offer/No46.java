@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 把数字翻译成字符串
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -33,10 +34,8 @@ public class No46 {
         return dp[n];
     }
 
-
     public static void main(String[] args) {
         No46 no46 = new No46();
         System.out.println(no46.numDecodings("122"));
     }
-
 }

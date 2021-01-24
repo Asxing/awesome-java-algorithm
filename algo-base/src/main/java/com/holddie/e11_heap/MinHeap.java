@@ -1,20 +1,12 @@
 package com.holddie.e11_heap;
 
-/**
- * 小顶堆
- */
+/** 小顶堆 */
 public class MinHeap {
-    /**
-     * 数组，从下标 1开始存储数据
-     */
+    /** 数组，从下标 1开始存储数据 */
     public int[] arrays;
-    /**
-     * 数组大小
-     */
+    /** 数组大小 */
     public int size;
-    /**
-     * 数组中存储数据数量
-     */
+    /** 数组中存储数据数量 */
     public int count;
 
     /**
@@ -45,9 +37,7 @@ public class MinHeap {
         }
     }
 
-    /**
-     * 移除堆顶元素
-     */
+    /** 移除堆顶元素 */
     public int removeMin() {
         if (count == 0) return -1;
         int res = arrays[1];
@@ -60,8 +50,8 @@ public class MinHeap {
      * 自下向上堆化
      *
      * @param arrays 数组
-     * @param count  数组数量
-     * @param i      1
+     * @param count 数组数量
+     * @param i 1
      */
     public void heapify(int[] arrays, int count, int i) {
         while (true) {
@@ -80,18 +70,14 @@ public class MinHeap {
         }
     }
 
-    /**
-     * 交换
-     */
+    /** 交换 */
     public void swap(int[] arrays, int p, int q) {
         int temp = arrays[p];
         arrays[p] = arrays[q];
         arrays[q] = temp;
     }
 
-    /**
-     * 类似一个层级遍历
-     */
+    /** 类似一个层级遍历 */
     public void printAll() {
         for (int i = 1; i < count + 1; i++) {
             System.out.print(arrays[i] + " ");

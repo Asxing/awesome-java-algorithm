@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 判断是否平衡二叉树
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,9 +10,7 @@ package com.holddie.sword.offer;
  */
 public class No5501 {
 
-    /**
-     * 平衡二叉树左右子树高度不超过1
-     */
+    /** 平衡二叉树左右子树高度不超过1 */
     private boolean isBalance = true;
 
     private boolean isbalancedSolution(TreeNode root) {
@@ -30,7 +29,6 @@ public class No5501 {
         }
         return 1 + Math.max(left, right);
     }
-
 
     public static void main(String[] args) {
         No5501 no5501 = new No5501();

@@ -4,14 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * 二叉树的遍历
- */
+/** 二叉树的遍历 */
 public class TraversalTree {
-    /**
-     * 前序遍历
-     * 根左右
-     */
+    /** 前序遍历 根左右 */
     public void preOrderTraversal(Node tree) {
         List<Integer> result = new ArrayList<>();
         if (null == tree) {
@@ -23,10 +18,7 @@ public class TraversalTree {
         preOrderTraversal(tree.right);
     }
 
-    /**
-     * 中序遍历
-     * 左根右
-     */
+    /** 中序遍历 左根右 */
     public void inOrderTraversal(Node tree) {
         List<Integer> result = new ArrayList<>();
         if (null == tree) {
@@ -38,10 +30,7 @@ public class TraversalTree {
         inOrderTraversal(tree.right);
     }
 
-    /**
-     * 后序遍历
-     * 左右根
-     */
+    /** 后序遍历 左右根 */
     public void postOrderTraversal(Node tree) {
         List<Integer> result = new ArrayList<>();
         if (null == tree) {
@@ -156,7 +145,7 @@ public class TraversalTree {
                 Node node;
                 // 因为是走z字形，所有相邻两层的节点处理是相反的
                 if (depth % 2 == 0) {
-                    //获取链表最后一个节点
+                    // 获取链表最后一个节点
                     node = queue.pollLast();
                     if (node.left != null) {
                         queue.offerFirst(node.left);
@@ -165,7 +154,7 @@ public class TraversalTree {
                         queue.offerFirst(node.right);
                     }
                 } else {
-                    //获取链表第一个节点
+                    // 获取链表第一个节点
                     node = queue.poll();
                     if (node.right != null) {
                         queue.offer(node.right);
@@ -182,8 +171,5 @@ public class TraversalTree {
         return result;
     }
 
-
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {}
 }

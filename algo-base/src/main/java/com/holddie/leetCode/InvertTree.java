@@ -1,31 +1,20 @@
 package com.holddie.leetCode;
 
 /**
- * 备注:
- * 这个问题是受到 Max Howell 的 原问题 启发的 ：
- * 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，
+ * 备注: 这个问题是受到 Max Howell 的 原问题 启发的 ： 谷歌：我们90％的工程师使用您编写的软件(Homebrew)，
  * 但是您却无法在面试时在白板上写出翻转二叉树这道题，这太糟糕了。
  */
 public class InvertTree {
     /**
      * 翻转一棵二叉树。
      *
-     * 示例：
+     * <p>示例：
      *
-     * 输入：
+     * <p>输入：
      *
-     *      4
-     *    /   \
-     *   2     7
-     *  / \   / \
-     * 1   3 6   9
-     * 输出：
+     * <p>4 / \ 2 7 / \ / \ 1 3 6 9 输出：
      *
-     *      4
-     *    /   \
-     *   7     2
-     *  / \   / \
-     * 9   6 3   1
+     * <p>4 / \ 7 2 / \ / \ 9 6 3 1
      *
      * @param root 二叉树
      * @return 反转后的二叉树
@@ -39,7 +28,8 @@ public class InvertTree {
         root.right = left;
         return root;
     }
-    private TreeNode createTreeNode(){
+
+    private TreeNode createTreeNode() {
         TreeNode treeNode = new TreeNode(4);
         TreeNode treeNode1 = new TreeNode(2);
         TreeNode treeNode2 = new TreeNode(7);
@@ -55,19 +45,24 @@ public class InvertTree {
         treeNode2.right = treeNode6;
         return treeNode;
     }
+
     private void preOrderTraversal(TreeNode tree) {
-        if (null == tree){
+        if (null == tree) {
             return;
         }
         System.out.print(tree.val + " ");
         preOrderTraversal(tree.left);
         preOrderTraversal(tree.right);
     }
+
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
     public static void main(String[] args) {

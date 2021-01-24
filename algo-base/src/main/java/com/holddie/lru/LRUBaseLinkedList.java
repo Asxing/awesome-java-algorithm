@@ -10,24 +10,16 @@ import java.util.Scanner;
  */
 public class LRUBaseLinkedList<T> {
 
-    /**
-     * 默认链表容量
-     */
-    private final static Integer DEFAULT_CAPACITY = 10;
+    /** 默认链表容量 */
+    private static final Integer DEFAULT_CAPACITY = 10;
 
-    /**
-     * 头结点
-     */
+    /** 头结点 */
     private SNode<T> headNode;
 
-    /**
-     * 链表长度
-     */
+    /** 链表长度 */
     private Integer length;
 
-    /**
-     * 链表容量
-     */
+    /** 链表容量 */
     private Integer capacity;
 
     public LRUBaseLinkedList() {
@@ -51,7 +43,7 @@ public class LRUBaseLinkedList<T> {
             intsertElemAtBegin(data);
         } else {
             if (length >= this.capacity) {
-                //删除尾结点
+                // 删除尾结点
                 deleteElemAtEnd();
             }
             intsertElemAtBegin(data);
@@ -98,9 +90,7 @@ public class LRUBaseLinkedList<T> {
         return null;
     }
 
-    /**
-     * 删除尾结点
-     */
+    /** 删除尾结点 */
     private void deleteElemAtEnd() {
         SNode ptr = headNode;
         // 空链表直接返回

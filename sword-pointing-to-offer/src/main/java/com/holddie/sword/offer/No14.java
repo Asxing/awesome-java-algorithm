@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 剪绳子
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -10,12 +11,13 @@ package com.holddie.sword.offer;
 public class No14 {
 
     /**
-     * 描述：把一根绳子剪成多段，并且使得每段的长度乘积最大。
-     * For example, given n = 2, return 1 (2 = 1 + 1); given n = 10, return 36 (10 = 3 + 3 + 4).
+     * 描述：把一根绳子剪成多段，并且使得每段的长度乘积最大。 For example, given n = 2, return 1 (2 = 1 + 1); given n = 10,
+     * return 36 (10 = 3 + 3 + 4).
      */
 
     /**
      * 动态规划法
+     *
      * @param n 长度
      * @return 最大乘积
      * @author HoldDie
@@ -35,6 +37,7 @@ public class No14 {
 
     /**
      * 贪心算法实现
+     *
      * @param n 长度
      * @return 最大乘积
      * @author HoldDie
@@ -59,12 +62,10 @@ public class No14 {
         return (int) (Math.pow(3, timesOf3)) * (int) (Math.pow(2, timeOf2));
     }
 
-
     public static void main(String[] args) {
         No14 no14 = new No14();
         System.out.println(no14.integerBreak(5));
-//        System.out.println(no14.integerBreakGreedy(15));
+        //        System.out.println(no14.integerBreakGreedy(15));
 
     }
-
 }

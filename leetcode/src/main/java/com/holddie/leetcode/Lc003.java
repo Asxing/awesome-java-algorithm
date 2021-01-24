@@ -2,6 +2,7 @@ package com.holddie.leetcode;
 
 /**
  * 无重复字符的最长子串
+ *
  * @author holddie
  * @version 1.0.0
  * @email holddie@163.com
@@ -22,8 +23,5 @@ public class Lc003 {
         return maxLength;
     }
 
-    public static void main(String[] args) {
-
-    }
-
+    public static void main(String[] args) {}
 }

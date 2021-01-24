@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 连续子数组的最大和
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -15,8 +16,7 @@ public class No42 {
         }
         int ret = Integer.MIN_VALUE;
         int sum = 0;
-        for (int num :
-                nums) {
+        for (int num : nums) {
             sum = sum < 0 ? num : sum + num;
             ret = Math.max(ret, sum);
         }
@@ -28,5 +28,4 @@ public class No42 {
         No42 no42 = new No42();
         System.out.println(no42.findGreatestSumOfSubArray(dd));
     }
-
 }

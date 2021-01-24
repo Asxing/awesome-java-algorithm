@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 丑数
+ *
  * @author HoldDie
  * @version 1.0.0
  * @email holddie@163.com
@@ -10,9 +11,7 @@ package com.holddie.sword.offer;
 public class No49 {
 
     /**
-     * 把只包含因子 2、3 和 5 的数称作丑数（Ugly Number）。
-     * 例如 6、8 都是丑数，但 14 不是，因为它包含因子 7。
-     * 习惯上我们把 1 当做是第一个丑数。
+     * 把只包含因子 2、3 和 5 的数称作丑数（Ugly Number）。 例如 6、8 都是丑数，但 14 不是，因为它包含因子 7。 习惯上我们把 1 当做是第一个丑数。
      * 求按从小到大的顺序的第 N 个丑数。
      */
     public int getuglynumberSolution(int index) {
@@ -43,5 +42,4 @@ public class No49 {
         System.out.println(no49.getuglynumberSolution(4));
         System.out.println(no49.getuglynumberSolution(7));
     }
-
 }

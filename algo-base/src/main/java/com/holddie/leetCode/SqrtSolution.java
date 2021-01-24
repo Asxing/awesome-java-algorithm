@@ -1,21 +1,18 @@
 package com.holddie.leetCode;
 
-
-/**
- * mic
- */
+/** mic */
 public class SqrtSolution {
 
     /**
      * 求一个正整数的平方根
      *
-     * @param num   正整数
+     * @param num 正整数
      * @param range 范围
      * @return 返回值
      */
     private double mySqrt(int num, double low, double high, double range) {
         double mid = (low + high) / 2f;
-//        System.out.println("mid = " + mid);
+        //        System.out.println("mid = " + mid);
         if (num - mid * mid < 0) {
             return mySqrt(num, low, (mid + high) / 2f, range);
         } else {

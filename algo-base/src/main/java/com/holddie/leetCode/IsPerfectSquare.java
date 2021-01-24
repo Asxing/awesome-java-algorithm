@@ -3,17 +3,14 @@ package com.holddie.leetCode;
 public class IsPerfectSquare {
     /**
      * 给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。
-     * <p>
-     * 说明：不要使用任何内置的库函数，如  sqrt。
-     * <p>
-     * 示例 1：
-     * <p>
-     * 输入：16
-     * 输出：True
-     * 示例 2：
-     * <p>
-     * 输入：14
-     * 输出：False
+     *
+     * <p>说明：不要使用任何内置的库函数，如  sqrt。
+     *
+     * <p>示例 1：
+     *
+     * <p>输入：16 输出：True 示例 2：
+     *
+     * <p>输入：14 输出：False
      *
      * @param num 正整数
      * @return 是否是完全平方数

@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 序列化二叉树
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,10 +10,7 @@ package com.holddie.sword.offer;
  */
 public class No37 {
 
-    /**
-     * 实现思路：
-     * 就是利用标识分隔符进行区分，然后进行递归的调用操作，反序列化也是同样的道理
-     */
+    /** 实现思路： 就是利用标识分隔符进行区分，然后进行递归的调用操作，反序列化也是同样的道理 */
     private String deserializeStr;
 
     private String serialize(TreeNode root) {
@@ -59,6 +57,4 @@ public class No37 {
 
         System.out.println(no37.deserialize(ser));
     }
-
-
 }

@@ -1,20 +1,12 @@
 package com.holddie.string;
 
-/**
- * KMP算法
- */
+/** KMP算法 */
 public class KMPByDFA {
-    /**
-     * 模式串
-     */
+    /** 模式串 */
     private String pattern;
-    /**
-     * 模式串长度
-     */
+    /** 模式串长度 */
     private int pLen;
-    /**
-     * 确定优先状态自动机
-     */
+    /** 确定优先状态自动机 */
     private int[][] dfa;
 
     /**
@@ -31,19 +23,18 @@ public class KMPByDFA {
         int i = 0;
         for (int j = 1; j < pLen; j++) {
             for (int k = 0; k < aLen; k++) {
-                //复制匹配失败情况下的值
+                // 复制匹配失败情况下的值
                 dfa[k][j] = dfa[k][i];
             }
-            //设置匹配成功情况下的值
+            // 设置匹配成功情况下的值
             dfa[pattern.charAt(j)][j] = j + 1;
-            //更新重新状态
+            // 更新重新状态
             i = dfa[pattern.charAt(j)][i];
         }
     }
 
     /**
-     * kmp
-     * txt上模拟DFA的运行
+     * kmp txt上模拟DFA的运行
      *
      * @param txt 主串
      * @return 返回值
@@ -55,9 +46,8 @@ public class KMPByDFA {
         for (; i < tLen && j < pLen; i++) {
             j = dfa[txt.charAt(i)][j];
         }
-        //找到匹配，到达模式串的结尾
-        if (j == pLen)
-            return i - pLen;
+        // 找到匹配，到达模式串的结尾
+        if (j == pLen) return i - pLen;
         return -1;
     }
 

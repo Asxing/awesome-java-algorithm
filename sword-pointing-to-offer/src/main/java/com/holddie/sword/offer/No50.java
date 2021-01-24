@@ -4,6 +4,7 @@ import java.util.BitSet;
 
 /**
  * 第一次出现一次的字符位置
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -47,5 +48,4 @@ public class No50 {
         System.out.println(no50.firstNotRepeatingChar("avsdsdfasdasdh"));
         System.out.println(no50.firstNotRepeatingCharUseSet("112312345746765789"));
     }
-
 }

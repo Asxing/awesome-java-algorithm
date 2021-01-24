@@ -6,6 +6,7 @@ import java.util.Queue;
 
 /**
  * 从上往下打印二叉树
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -13,12 +14,7 @@ import java.util.Queue;
  */
 public class No32 {
 
-    /**
-     * 解题思路：
-     * 1、当然在遍历二叉树的时候，使用了队列这种数据结构
-     * 2、借助一个数组，在循环遍历每一个层的每一个节点的时候，
-     * 都进行数组添加
-     */
+    /** 解题思路： 1、当然在遍历二叉树的时候，使用了队列这种数据结构 2、借助一个数组，在循环遍历每一个层的每一个节点的时候， 都进行数组添加 */
     private ArrayList<Integer> printFromTopToBottom(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         ArrayList<Integer> ret = new ArrayList<>();
@@ -58,5 +54,4 @@ public class No32 {
         No32 no32 = new No32();
         System.out.println(no32.printFromTopToBottom(treeNode1));
     }
-
 }

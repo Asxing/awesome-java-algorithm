@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * 滑动窗口的最大值
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -12,12 +13,9 @@ import java.util.PriorityQueue;
  */
 public class No59 {
 
-
     /**
-     * 题目描述：
-     * 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。
-     * 例如，如果输入数组 {2, 3, 4, 2, 6, 2, 5, 1} 及滑动窗口的大小 3，
-     * 那么一共存在 6 个滑动窗口，他们的最大值分别为 {4, 4, 6, 6, 6, 5}。
+     * 题目描述： 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。 例如，如果输入数组 {2, 3, 4, 2, 6, 2, 5, 1} 及滑动窗口的大小 3， 那么一共存在 6
+     * 个滑动窗口，他们的最大值分别为 {4, 4, 6, 6, 6, 5}。
      */
     private ArrayList<Integer> maxInWindows(int[] num, int size) {
         ArrayList<Integer> ret = new ArrayList<>();
@@ -42,5 +40,4 @@ public class No59 {
         No59 no59 = new No59();
         System.out.println(no59.maxInWindows(num, 3));
     }
-
 }

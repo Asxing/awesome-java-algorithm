@@ -3,17 +3,11 @@ package com.holddie.e12_graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * 图的两种暴力搜索算法
- */
+/** 图的两种暴力搜索算法 */
 public class Graph {
-    /**
-     * 顶点个数
-     */
+    /** 顶点个数 */
     private int count;
-    /**
-     * 邻接表
-     */
+    /** 邻接表 */
     private LinkedList<Integer>[] adj;
 
     /**
@@ -97,9 +91,9 @@ public class Graph {
      * 递归
      *
      * @param visited visited
-     * @param prev    prev
-     * @param oSide   顺序边
-     * @param rSide   逆序边
+     * @param prev prev
+     * @param oSide 顺序边
+     * @param rSide 逆序边
      */
     private void recursiveDfs(boolean[] visited, int[] prev, int oSide, int rSide) {
         if (found) return;
@@ -123,31 +117,31 @@ public class Graph {
         //  3 -- 4 -- 5
         //  |    |    |
         //  6 -- 7 -- 8
-        add(0, 1);//add(1,0);
-        add(0, 3);//add(3,0);
+        add(0, 1); // add(1,0);
+        add(0, 3); // add(3,0);
 
-        add(1, 2);//add(2,1);
-        add(1, 4);// add(4,1);
+        add(1, 2); // add(2,1);
+        add(1, 4); // add(4,1);
 
-        add(2, 5);//add(5,2);
+        add(2, 5); // add(5,2);
 
-        add(3, 4);//add(4,3);
-        add(3, 6);//add(6,3);
+        add(3, 4); // add(4,3);
+        add(3, 6); // add(6,3);
 
-        add(4, 5);//add(5,4);
-        add(4, 7);// add(7,4);
+        add(4, 5); // add(5,4);
+        add(4, 7); // add(7,4);
 
-        add(5, 8);//add(8,5);
+        add(5, 8); // add(8,5);
 
-        add(6, 7);//add(7,6);
+        add(6, 7); // add(7,6);
 
-        add(7, 8);//add(8,7);
+        add(7, 8); // add(8,7);
     }
 
     /**
      * 递归正向输出图的路径
      *
-     * @param prev  prev
+     * @param prev prev
      * @param oSide 顺序边
      * @param rSide 逆序边
      */

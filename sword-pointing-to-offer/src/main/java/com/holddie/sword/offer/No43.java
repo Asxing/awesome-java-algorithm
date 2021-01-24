@@ -2,13 +2,13 @@ package com.holddie.sword.offer;
 
 /**
  * 从1到n整数中1出现的次数
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
  * @date 2018/6/7 9:21
  */
 public class No43 {
-
 
     private int numberof1between1andSolution(int n) {
         int cnt = 0;

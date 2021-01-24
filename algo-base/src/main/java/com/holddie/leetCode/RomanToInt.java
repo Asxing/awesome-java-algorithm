@@ -1,36 +1,25 @@
 package com.holddie.leetCode;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
- * 罗马数字转整数
- * I             1
- * V             5
- * X             10
- * L             50
- * C             100
- * D             500
- * M             1000
+ * 罗马数字转整数 I 1 V 5 X 10 L 50 C 100 D 500 M 1000
  *
  * @author liuchao
  * @date 2019/5/22
  */
 public class RomanToInt {
     /**
-     * 规则
-     * I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。
-     * X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。
-     * C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
+     * 规则 I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。 X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 C 可以放在 D
+     * (500) 和 M (1000) 的左边，来表示 400 和 900。
      *
      * @param s 字符串
      * @return 返回值
      */
     private int solution(String s) {
         Map<String, Integer> map = initDictionary();
-        //临时变量，存储前一位
+        // 临时变量，存储前一位
         char temp = s.charAt(0);
         String[] strs = new String[s.length()];
         int index = 0;
@@ -63,7 +52,7 @@ public class RomanToInt {
     /**
      * 判断当前字符是否可以组合
      *
-     * @param prev    前
+     * @param prev 前
      * @param current 当前
      * @return 返回结果
      */
@@ -72,7 +61,7 @@ public class RomanToInt {
         String str = String.valueOf(current);
         switch (expression) {
             case "I":
-                //IV  4    IX 9
+                // IV  4    IX 9
                 if ("V".equals(str) || "X".equals(str)) {
                     return true;
                 }
@@ -119,7 +108,7 @@ public class RomanToInt {
     }
 
     public static void main(String[] args) {
-        //2019
+        // 2019
         String s = "MCMXCIV";
         RomanToInt romanToInt = new RomanToInt();
         int result = romanToInt.solution(s);

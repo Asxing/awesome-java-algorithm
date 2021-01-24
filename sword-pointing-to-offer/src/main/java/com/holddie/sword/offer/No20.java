@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 表示数值的字符串
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -15,8 +16,8 @@ public class No20 {
 
     public static void main(String[] args) {
         No20 no20 = new No20();
-//        System.out.println(no20.isNumberic("+100".toCharArray()));
-//        System.out.println(no20.isNumberic("+100".toCharArray()));
+        //        System.out.println(no20.isNumberic("+100".toCharArray()));
+        //        System.out.println(no20.isNumberic("+100".toCharArray()));
         System.out.println(no20.isNumberic("5e2".toCharArray()));
     }
 }

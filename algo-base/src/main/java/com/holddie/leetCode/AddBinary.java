@@ -8,14 +8,8 @@ package com.holddie.leetCode;
  */
 public class AddBinary {
     /**
-     * 给定两个二进制字符串，返回他们的和（用二进制表示）。
-     * 输入为非空字符串且只包含数字 1 和 0。
-     * 示例 1:
-     * 输入: a = "11", b = "1"
-     * 输出: "100"
-     * 示例 2:
-     * 输入: a = "1010", b = "1011"
-     * 输出: "10101"
+     * 给定两个二进制字符串，返回他们的和（用二进制表示）。 输入为非空字符串且只包含数字 1 和 0。 示例 1: 输入: a = "11", b = "1" 输出: "100" 示例 2:
+     * 输入: a = "1010", b = "1011" 输出: "10101"
      *
      * @param a 二进制数字
      * @param b 二进制数字
@@ -43,6 +37,6 @@ public class AddBinary {
         AddBinary addBinary = new AddBinary();
         String a = "1010";
         String b = "1011";
-        System.out.println(addBinary.solution(a,b));
+        System.out.println(addBinary.solution(a, b));
     }
 }

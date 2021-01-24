@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 最长不含重复字符的子字符串
+ *
  * @author HoldDie
  * @version 1.0.0
  * @email holddie@163.com
@@ -11,12 +12,7 @@ import java.util.Arrays;
  */
 public class No48 {
 
-    /**
-     * 题目描述：
-     * 输入一个字符串（只包含 a~z 的字符），求其最长不含重复字符的
-     * 子字符串的长度。例如对于 arabcacfr，最长不含重复字符的子字
-     * 符串为 acfr，长度为 4。
-     */
+    /** 题目描述： 输入一个字符串（只包含 a~z 的字符），求其最长不含重复字符的 子字符串的长度。例如对于 arabcacfr，最长不含重复字符的子字 符串为 acfr，长度为 4。 */
     private int longestSubStringWithoutDuplication(String str) {
         int curLen = 0;
         int maxLen = 0;
@@ -40,7 +36,6 @@ public class No48 {
     public static void main(String[] args) {
         No48 no48 = new No48();
         System.out.println(no48.longestSubStringWithoutDuplication("arabcacfr"));
-//        System.out.println("123123123");
+        //        System.out.println("123123123");
     }
-
 }

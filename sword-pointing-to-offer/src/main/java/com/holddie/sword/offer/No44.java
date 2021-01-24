@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 数字序列中的某一位数字
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -54,5 +55,4 @@ public class No44 {
         System.out.println(no44.digitAtIndex(14));
         System.out.println(no44.digitAtIndex(15));
     }
-
 }

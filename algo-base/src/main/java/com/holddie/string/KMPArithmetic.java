@@ -1,13 +1,11 @@
 package com.holddie.string;
 
-/**
- * KMP 算法
- */
+/** KMP 算法 */
 public class KMPArithmetic {
     /**
      * kmp
      *
-     * @param txt     主串
+     * @param txt 主串
      * @param pattern 模式串
      * @return 返回值
      */
@@ -23,10 +21,8 @@ public class KMPArithmetic {
                 index = next[index - 1] + 1;
             }
             System.out.println(txtChars[i] + " -- " + patChars[index]);
-            if (txtChars[i] == patChars[index])
-                ++index;
-            if (index == pLen)
-                return i - pLen + 1;
+            if (txtChars[i] == patChars[index]) ++index;
+            if (index == pLen) return i - pLen + 1;
         }
         return -1;
     }
@@ -35,7 +31,7 @@ public class KMPArithmetic {
      * 构造失效函数
      *
      * @param patChars 模式串
-     * @param pLen     模式串长度
+     * @param pLen 模式串长度
      * @return 返回值
      */
     private int[] getNext(char[] patChars, int pLen) {
@@ -46,8 +42,7 @@ public class KMPArithmetic {
             while (k != -1 && patChars[k + 1] != patChars[i]) {
                 k = next[k];
             }
-            if (patChars[k + 1] == patChars[i])
-                ++k;
+            if (patChars[k + 1] == patChars[i]) ++k;
             next[i] = k;
         }
         System.out.println("好前缀：");

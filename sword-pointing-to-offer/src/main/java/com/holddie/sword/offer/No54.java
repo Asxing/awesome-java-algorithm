@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 二叉搜索树的第K个结点
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -48,8 +49,5 @@ public class No54 {
         treeNode7.setRight(treeNode8);
 
         System.out.println(no54.kthNode(treeNode5, 3));
-
     }
-
-
 }

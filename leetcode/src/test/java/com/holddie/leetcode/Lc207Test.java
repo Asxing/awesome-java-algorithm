@@ -8,62 +8,62 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Lc207Test {
 
-	private Lc207 lc207UnderTest;
+    private Lc207 lc207UnderTest;
 
-	@BeforeEach
-	void setUp() {
-		lc207UnderTest = new Lc207();
-	}
+    @BeforeEach
+    void setUp() {
+        lc207UnderTest = new Lc207();
+    }
 
-	@Test
-	void testCanFinish() {
-		// Setup
-		final int[][] prerequisites = new int[][]{{1, 0}};
-		int numCourses = 2;
+    @Test
+    void testCanFinish() {
+        // Setup
+        final int[][] prerequisites = new int[][] {{1, 0}};
+        int numCourses = 2;
 
-		// Run the test
-		final boolean result = lc207UnderTest.canFinish(numCourses, prerequisites);
+        // Run the test
+        final boolean result = lc207UnderTest.canFinish(numCourses, prerequisites);
 
-		// Verify the results
-		assertTrue(result);
-	}
+        // Verify the results
+        assertTrue(result);
+    }
 
-	@Test
-	void testCanFinish1() {
-		// Setup
-		final int[][] prerequisites = new int[][]{{1, 0}, {0, 1}};
-		int numCourses = 2;
+    @Test
+    void testCanFinish1() {
+        // Setup
+        final int[][] prerequisites = new int[][] {{1, 0}, {0, 1}};
+        int numCourses = 2;
 
-		// Run the test
-		final boolean result = lc207UnderTest.canFinish(numCourses, prerequisites);
+        // Run the test
+        final boolean result = lc207UnderTest.canFinish(numCourses, prerequisites);
 
-		// Verify the results
-		assertFalse(result);
-	}
+        // Verify the results
+        assertFalse(result);
+    }
 
-	@Test
-	void testCanFinishWayTwo() {
-		// Setup
-		final int[][] prerequisites = new int[][]{{1, 0}};
-		int numCourses = 2;
+    @Test
+    void testCanFinishWayTwo() {
+        // Setup
+        final int[][] prerequisites = new int[][] {{1, 0}};
+        int numCourses = 2;
 
-		// Run the test
-		final boolean result = lc207UnderTest.canFinishWayTwo(numCourses, prerequisites);
+        // Run the test
+        final boolean result = lc207UnderTest.canFinishWayTwo(numCourses, prerequisites);
 
-		// Verify the results
-		assertTrue(result);
-	}
+        // Verify the results
+        assertTrue(result);
+    }
 
-	@Test
-	void testCanFinishWayTwo1() {
-		// Setup
-		final int[][] prerequisites = new int[][]{{1, 0}, {0, 1}};
-		int numCourses = 2;
+    @Test
+    void testCanFinishWayTwo1() {
+        // Setup
+        final int[][] prerequisites = new int[][] {{1, 0}, {0, 1}};
+        int numCourses = 2;
 
-		// Run the test
-		final boolean result = lc207UnderTest.canFinishWayTwo(numCourses, prerequisites);
+        // Run the test
+        final boolean result = lc207UnderTest.canFinishWayTwo(numCourses, prerequisites);
 
-		// Verify the results
-		assertFalse(result);
-	}
+        // Verify the results
+        assertFalse(result);
+    }
 }

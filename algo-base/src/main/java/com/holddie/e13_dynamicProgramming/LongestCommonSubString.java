@@ -17,20 +17,20 @@ public class LongestCommonSubString {
      * @return 返回最长公共子串
      */
     private String solution(String str1, String str2) {
-//        构建二阶矩阵
-//             b  d  c  a  b  a
-//         a  [0, 0, 0, 1, 0, 1]
-//         b  [1, 0, 0, 0, 2, 0]
-//         c  [0, 0, 1, 0, 0, 0]
-//         b  [1, 0, 0, 0, 1, 0]
-//         d  [0, 2, 0, 0, 0, 0]
-//         a  [0, 0, 0, 1, 0, 1]
-//         b  [1, 0, 0, 0, 2, 0]
-//        状态转移方程公式
-//        dp[i][0] = 0; (0<=i<=m)
-//        dp[0][j] = 0; (0<=j<=n)
-//        dp[i][j] = dp[i-1][j-1] +1; (str1[i] == str2[j])
-//        dp[i][j] = 0; (str1[i] != str2[j])
+        //        构建二阶矩阵
+        //             b  d  c  a  b  a
+        //         a  [0, 0, 0, 1, 0, 1]
+        //         b  [1, 0, 0, 0, 2, 0]
+        //         c  [0, 0, 1, 0, 0, 0]
+        //         b  [1, 0, 0, 0, 1, 0]
+        //         d  [0, 2, 0, 0, 0, 0]
+        //         a  [0, 0, 0, 1, 0, 1]
+        //         b  [1, 0, 0, 0, 2, 0]
+        //        状态转移方程公式
+        //        dp[i][0] = 0; (0<=i<=m)
+        //        dp[0][j] = 0; (0<=j<=n)
+        //        dp[i][j] = dp[i-1][j-1] +1; (str1[i] == str2[j])
+        //        dp[i][j] = 0; (str1[i] != str2[j])
         int[][] dp = new int[str1.length()][str2.length()];
         char[] str1Chars = str1.toCharArray();
         char[] str2Chars = str2.toCharArray();
@@ -60,7 +60,7 @@ public class LongestCommonSubString {
         }
         print(dp);
         int max = dp[0][0];
-        //--> j
+        // --> j
         int x = 0;
         // --> i
         int y = 0;
@@ -79,17 +79,9 @@ public class LongestCommonSubString {
     }
 
     /**
-     * 优化
-     * 根据解法1可以找到规律，求最长公共子串可以转换为求二阶矩阵的最大递增对角线问题
-     *     b  d  c  a  b  a
-     * a  [0, 0, 0, 1, 0, 1]
-     * b  [1, 0, 0, 0, 2, 0]
-     * c  [0, 0, 1, 0, 0, 0]
-     * b  [1, 0, 0, 0, 1, 0]
-     * d  [0, 2, 0, 0, 0, 0]
-     * a  [0, 0, 0, 1, 0, 1]
-     * b  [1, 0, 0, 0, 2, 0]
-     * 求 2 1
+     * 优化 根据解法1可以找到规律，求最长公共子串可以转换为求二阶矩阵的最大递增对角线问题 b d c a b a a [0, 0, 0, 1, 0, 1] b [1, 0, 0, 0, 2,
+     * 0] c [0, 0, 1, 0, 0, 0] b [1, 0, 0, 0, 1, 0] d [0, 2, 0, 0, 0, 0] a [0, 0, 0, 1, 0, 1] b [1,
+     * 0, 0, 0, 2, 0] 求 2 1
      *
      * @param str1 string
      * @param str2 string
@@ -102,11 +94,11 @@ public class LongestCommonSubString {
         int y = 0;
         int index = 0;
         int max = 0;
-        //列
+        // 列
         int row = 0;
-        //行
+        // 行
         int col = str2Chars.length - 1;
-        //计算矩阵中的每一条斜对角线上的值
+        // 计算矩阵中的每一条斜对角线上的值
         while (row < str1Chars.length) {
             int i = row;
             int j = col;

@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * n个骰子的点数
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -11,16 +12,13 @@ import java.util.*;
  */
 public class No60 {
 
-
     /**
-     * 题目描述：
-     * 把N个骰子扔在地上，求点数和为S的概率
-     * <p>
-     * 解题思路:
-     * <p>
-     * 使用一个二维数组dp存储点数出现的次数，其中 dp[i][j] 表示前 i 个骰子产生点数 j 的次数
+     * 题目描述： 把N个骰子扔在地上，求点数和为S的概率
+     *
+     * <p>解题思路:
+     *
+     * <p>使用一个二维数组dp存储点数出现的次数，其中 dp[i][j] 表示前 i 个骰子产生点数 j 的次数
      */
-
     private List<Map.Entry<Integer, Double>> dicesSum(int n) {
         final int face = 6;
         final int pointNum = face * n;
@@ -55,7 +53,7 @@ public class No60 {
             for (int j = 0; j <= pointNum; j++) {
                 dp[flag][j] = 0; // 旋转数组清零
             }
-            for (int j = i; j <= pointNum; j++)  // 使用 i 个骰子最小点数为 i
+            for (int j = i; j <= pointNum; j++) // 使用 i 个骰子最小点数为 i
             {
                 for (int k = 1; k <= face && k <= j; k++) {
                     dp[flag][j] += dp[1 - flag][j - k];
@@ -74,5 +72,4 @@ public class No60 {
         No60 no60 = new No60();
         System.out.println(Arrays.toString(no60.dicesSum(2).toArray()));
     }
-
 }

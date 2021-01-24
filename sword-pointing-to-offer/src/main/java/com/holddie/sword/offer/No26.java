@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 判断是否是子结构
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,18 +10,21 @@ package com.holddie.sword.offer;
  */
 public class No26 {
 
-
-    /**
-     * 题目描述：
-     * 输入两棵二叉树A，B，判断B是不是A的子结构。
-     * （ps：我们约定空树不是任意一个树的子结构）
-     */
+    /** 题目描述： 输入两棵二叉树A，B，判断B是不是A的子结构。 （ps：我们约定空树不是任意一个树的子结构） */
     private boolean hasSubtree(TreeNode root1, TreeNode root2) {
-        return root1 != null && root2 != null && (isSubtree(root1, root2) || hasSubtree(root1.left, root2) || hasSubtree(root1.right, root2));
+        return root1 != null
+                && root2 != null
+                && (isSubtree(root1, root2)
+                        || hasSubtree(root1.left, root2)
+                        || hasSubtree(root1.right, root2));
     }
 
     private boolean isSubtree(TreeNode root1, TreeNode root2) {
-        return root2 == null || root1 != null && root1.val == root2.val && isSubtree(root1.left, root2.left) && isSubtree(root1.right, root2.right);
+        return root2 == null
+                || root1 != null
+                        && root1.val == root2.val
+                        && isSubtree(root1.left, root2.left)
+                        && isSubtree(root1.right, root2.right);
     }
 
     public static void main(String[] args) {
@@ -46,5 +50,4 @@ public class No26 {
         No26 no26 = new No26();
         System.out.println(no26.hasSubtree(treeNode1, treeNode7));
     }
-
 }

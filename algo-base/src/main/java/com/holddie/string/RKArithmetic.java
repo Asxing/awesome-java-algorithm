@@ -3,36 +3,21 @@ package com.holddie.string;
 import java.math.BigInteger;
 import java.util.Random;
 
-/**
- * RK算法
- */
+/** RK算法 */
 public class RKArithmetic {
 
-    /**
-     * 模式串
-     */
+    /** 模式串 */
     private String pattern;
-    /**
-     * 模式串长度
-     */
+    /** 模式串长度 */
     private int pLen;
-    /**
-     * 模式串hash值
-     */
+    /** 模式串hash值 */
     private long patHash;
-    /**
-     * 一个非常大的素数
-     */
+    /** 一个非常大的素数 */
     private long slat;
-    /**
-     * 字母表长度
-     */
+    /** 字母表长度 */
     private int aLen;
-    /**
-     * aLen^(pLen - 1) % slat
-     */
+    /** aLen^(pLen - 1) % slat */
     private long aps;
-
 
     /**
      * 有参构造方法
@@ -64,16 +49,14 @@ public class RKArithmetic {
         int n = txt.length();
         if (n < pLen) return -1;
         long txtHash = hash(txt, pLen);
-        if ((patHash == txtHash) && check(txt, 0))
-            return 0;
+        if ((patHash == txtHash) && check(txt, 0)) return 0;
 
         for (int i = pLen; i < n; i++) {
             txtHash = (txtHash + slat - aps * txt.charAt(i - pLen) % slat) % slat;
             txtHash = (txtHash * aLen + txt.charAt(i)) % slat;
             int offset = i - pLen + 1;
             System.out.println("第" + offset + "次txtHash = " + txtHash);
-            if ((patHash == txtHash) && check(txt, offset))
-                return offset;
+            if ((patHash == txtHash) && check(txt, offset)) return offset;
         }
         return -1;
     }
@@ -82,7 +65,7 @@ public class RKArithmetic {
      * hash
      *
      * @param txt 主串
-     * @param i   i
+     * @param i i
      * @return 返回值
      */
     private long hash(String txt, int i) {
@@ -97,13 +80,11 @@ public class RKArithmetic {
      * 校验模式串是否匹配
      *
      * @param txt 主串
-     * @param i   i
+     * @param i i
      * @return 返回值
      */
     private boolean check(String txt, int i) {
-        for (int j = 0; j < pLen; j++)
-            if (pattern.charAt(j) != txt.charAt(i + j))
-                return false;
+        for (int j = 0; j < pLen; j++) if (pattern.charAt(j) != txt.charAt(i + j)) return false;
         return true;
     }
 

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 /**
  * 和为s 连续正数序列
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
  * @date 2018/6/22 9:29
  */
 public class No5702 {
-
 
     private ArrayList<ArrayList<Integer>> findContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> ret = new ArrayList<>();

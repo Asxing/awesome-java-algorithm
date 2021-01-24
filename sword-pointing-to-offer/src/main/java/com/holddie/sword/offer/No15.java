@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 二进制中1的个数
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,13 +10,10 @@ package com.holddie.sword.offer;
  */
 public class No15 {
 
-    /**
-     * 描述：输入一个整数，输出该数二进制表示中1的个数
-     */
+    /** 描述：输入一个整数，输出该数二进制表示中1的个数 */
     public int numberOf(int n) {
         return Integer.bitCount(n);
     }
-
 
     public static void main(String[] args) {
         No15 no15 = new No15();
@@ -24,8 +22,8 @@ public class No15 {
     }
 
     /**
-     * 实际因为在二进制下一个位表示的地方：不是0就是1
-     * 这样当进行减一操作时，就会把二进制中有1的地方进行借位运算
+     * 实际因为在二进制下一个位表示的地方：不是0就是1 这样当进行减一操作时，就会把二进制中有1的地方进行借位运算
+     *
      * @param n 整数
      * @return int
      * @author HoldDie
@@ -40,5 +38,4 @@ public class No15 {
         }
         return cnt;
     }
-
 }

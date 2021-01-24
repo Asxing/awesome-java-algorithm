@@ -1,12 +1,8 @@
 package com.holddie.e10_tree;
 
-/**
- * 二叉搜索树
- */
+/** 二叉搜索树 */
 public class BinarySearchTree {
-    /**
-     * 根节点
-     */
+    /** 根节点 */
     private Node tree;
 
     /**
@@ -44,7 +40,7 @@ public class BinarySearchTree {
      */
     private void delete(int data) {
         Node node = tree;
-        //node的父节点
+        // node的父节点
         Node pNode = null;
         while (null != node && node.data != data) {
             pNode = node;
@@ -59,13 +55,13 @@ public class BinarySearchTree {
         }
         if (null != node.left && null != node.right) {
             Node p = node.right;
-            //p的父节点
+            // p的父节点
             Node pp = node;
             while (null != p.left) {
                 pp = p.left;
                 p = p.left;
             }
-            //删除操作
+            // 删除操作
             node.data = p.data;
             node = p;
             pNode = pp;

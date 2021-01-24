@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 /**
  * 字符串的排列
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -33,7 +34,7 @@ public class No38 {
             if (hasUsed[i]) {
                 continue;
             }
-            if (i != 0 && chars[i] == chars[i - 1] && !hasUsed[i - 1]) { //去重
+            if (i != 0 && chars[i] == chars[i - 1] && !hasUsed[i - 1]) { // 去重
                 continue;
             }
             hasUsed[i] = true;
@@ -48,5 +49,4 @@ public class No38 {
         No38 no38 = new No38();
         System.out.println(no38.permutation("aabc"));
     }
-
 }

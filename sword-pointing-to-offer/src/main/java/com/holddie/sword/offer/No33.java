@@ -2,13 +2,13 @@ package com.holddie.sword.offer;
 
 /**
  * 二叉树搜索树的后续遍历序列
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
  * @date 2018/6/1 8:17
  */
 public class No33 {
-
 
     public boolean verifySquenceOfBST(int[] sequence) {
         if (sequence == null || sequence.length == 0) {
@@ -31,7 +31,8 @@ public class No33 {
                 return false;
             }
         }
-        return verify(sequence, fastIndex, cutIndex - 1) && verify(sequence, cutIndex, lastIndex - 1);
+        return verify(sequence, fastIndex, cutIndex - 1)
+                && verify(sequence, cutIndex, lastIndex - 1);
     }
 
     public static void main(String[] args) {
@@ -39,6 +40,4 @@ public class No33 {
         No33 no33 = new No33();
         System.out.println(no33.verifySquenceOfBST(aa));
     }
-
-
 }

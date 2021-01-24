@@ -1,20 +1,12 @@
 package com.holddie.e11_heap;
 
-/**
- * 大顶堆
- */
+/** 大顶堆 */
 public class MaxHeap {
-    /**
-     * 数组，从下标 1开始存储数据
-     */
+    /** 数组，从下标 1开始存储数据 */
     public int[] arrays;
-    /**
-     * 数组大小
-     */
+    /** 数组大小 */
     public int size;
-    /**
-     * 数组中存储数据数量
-     */
+    /** 数组中存储数据数量 */
     public int count;
 
     /**
@@ -43,9 +35,7 @@ public class MaxHeap {
         }
     }
 
-    /**
-     * 移除堆顶元素
-     */
+    /** 移除堆顶元素 */
     public int removeMax() {
         if (count == 0) return -1;
         int res = arrays[1];
@@ -59,8 +49,8 @@ public class MaxHeap {
      * 自下向上堆化
      *
      * @param arrays 数组
-     * @param count  数组数量
-     * @param i      index
+     * @param count 数组数量
+     * @param i index
      */
     public void heapify(int[] arrays, int count, int i) {
         while (true) {
@@ -73,21 +63,18 @@ public class MaxHeap {
         }
     }
 
-    /**
-     * 交换
-     */
+    /** 交换 */
     public void swap(int[] arrays, int p, int q) {
         int temp = arrays[p];
         arrays[p] = arrays[q];
         arrays[q] = temp;
     }
 
-
     /**
      * 建堆
      *
      * @param arrays 数组
-     * @param size   数组大小
+     * @param size 数组大小
      */
     public void buildHeap(int[] arrays, int size) {
         for (int i = size / 2; i > 0; --i) {
@@ -95,9 +82,7 @@ public class MaxHeap {
         }
     }
 
-    /**
-     * 排序
-     */
+    /** 排序 */
     public void sort() {
         buildHeap(arrays, count);
         System.out.println("建堆后:");
@@ -109,10 +94,7 @@ public class MaxHeap {
         }
     }
 
-
-    /**
-     * 类似一个层级遍历
-     */
+    /** 类似一个层级遍历 */
     public void printAll() {
         for (int i = 1; i < count + 1; i++) {
             System.out.print(arrays[i] + " ");

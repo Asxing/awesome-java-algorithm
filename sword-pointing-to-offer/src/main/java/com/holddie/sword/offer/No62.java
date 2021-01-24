@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 圆圈中最后剩下的数
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -9,11 +10,7 @@ package com.holddie.sword.offer;
  */
 public class No62 {
 
-    /**
-     * 解题思路：
-     * 约瑟夫环，圆圈长度为n的解可以看成长度为n-1
-     * 的解在加上报数的长度m，因为是圆圈，所以最后需要对n取余
-     */
+    /** 解题思路： 约瑟夫环，圆圈长度为n的解可以看成长度为n-1 的解在加上报数的长度m，因为是圆圈，所以最后需要对n取余 */
     private int lastRemainingSolution(int n, int m) {
         if (n == 0) {
             return -1;
@@ -28,5 +25,4 @@ public class No62 {
         No62 no62 = new No62();
         System.out.println(no62.lastRemainingSolution(13, 2));
     }
-
 }

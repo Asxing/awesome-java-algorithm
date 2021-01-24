@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 数字在排序数组中出现的次数
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -29,10 +30,9 @@ public class No53 {
     }
 
     public static void main(String[] args) {
-//        No53 no53 = new No53();
-//        int[] nums = {1, 2, 3, 3, 3, 3, 4, 6};
-//        System.out.println(no53.getNumberOfK(nums, 3));
+        //        No53 no53 = new No53();
+        //        int[] nums = {1, 2, 3, 3, 3, 3, 4, 6};
+        //        System.out.println(no53.getNumberOfK(nums, 3));
         System.out.println(123);
     }
-
 }

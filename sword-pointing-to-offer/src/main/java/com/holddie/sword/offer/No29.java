@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * 顺时针打印矩阵数字
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -12,8 +13,8 @@ import java.util.ArrayList;
 public class No29 {
 
     /**
-     * 整体就是围绕着矩阵的四个参数循环遍历，
-     * 然后中间再判断一下行的开始和结束是否相等
+     * 整体就是围绕着矩阵的四个参数循环遍历， 然后中间再判断一下行的开始和结束是否相等
+     *
      * @param matrix 二位矩阵数组
      * @return 循环遍历完的数组
      * @author HoldDie
@@ -58,6 +59,4 @@ public class No29 {
         No29 no29 = new No29();
         System.out.println(no29.printMatrix(martrix));
     }
-
-
 }

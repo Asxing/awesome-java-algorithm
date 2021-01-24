@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 链表中倒数第k个结点
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -10,11 +11,8 @@ package com.holddie.sword.offer;
 public class No22 {
 
     /**
-     * 解题思路：
-     * 设链表的长度为 N。设两个指针 P1 和 P2，先让 P1 移动 K 个节点，
-     * 则还有 N - K 个节点可以移动。此时让 P1 和 P2 同时移动，可以知
-     * 道当 P1 移动到链表结尾时，P2 移动到 N - K 个节点处，该位置就
-     * 是倒数第 K 个节点。
+     * 解题思路： 设链表的长度为 N。设两个指针 P1 和 P2，先让 P1 移动 K 个节点， 则还有 N - K 个节点可以移动。此时让 P1 和 P2 同时移动，可以知 道当 P1
+     * 移动到链表结尾时，P2 移动到 N - K 个节点处，该位置就 是倒数第 K 个节点。
      */
     private ListNode FindKthTotail(ListNode head, int k) {
         if (head == null) {
@@ -36,10 +34,9 @@ public class No22 {
     }
 
     /**
-     * 核心思想：利用两个指针一个做标记，两个指针之间相差k个距离，这样
-     * 当第一个走完的时候，慢的那个指针也就刚好到达倒数的第k的位置。
-     * <p>
-     * 缺点：会全部遍历一遍
+     * 核心思想：利用两个指针一个做标记，两个指针之间相差k个距离，这样 当第一个走完的时候，慢的那个指针也就刚好到达倒数的第k的位置。
+     *
+     * <p>缺点：会全部遍历一遍
      */
     public static void main(String[] args) {
         ListNode node1 = new ListNode("A");
@@ -56,6 +53,4 @@ public class No22 {
         No22 no22 = new No22();
         System.out.println(no22.FindKthTotail(node1, 3));
     }
-
-
 }

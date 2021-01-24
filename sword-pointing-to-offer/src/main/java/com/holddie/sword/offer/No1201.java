@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 回溯法
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -10,10 +11,11 @@ package com.holddie.sword.offer;
 public class No1201 {
     /**
      * 假设一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。
+     *
      * @param matrix 输入矩阵
-     * @param rows   矩阵行数
-     * @param cols   矩阵列数
-     * @param str    要搜索的字符串
+     * @param rows 矩阵行数
+     * @param cols 矩阵列数
+     * @param str 要搜索的字符串
      * @return 是否找到 true是。false否
      */
     public static boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
@@ -44,18 +46,26 @@ public class No1201 {
 
     /**
      * 回溯搜索算法
-     * @param matrix     输入矩阵
-     * @param rows       矩阵行数
-     * @param cols       矩阵列数
-     * @param str        要搜索的字符串
-     * @param visited    訪问标记数组
-     * @param row        当前处理的行号
-     * @param col        当前处理的列号
+     *
+     * @param matrix 输入矩阵
+     * @param rows 矩阵行数
+     * @param cols 矩阵列数
+     * @param str 要搜索的字符串
+     * @param visited 訪问标记数组
+     * @param row 当前处理的行号
+     * @param col 当前处理的列号
      * @param pathLength 已经处理的str中字符个数
      * @return 是否找到 true是，false否
      */
-    private static boolean hasPathCore(char[] matrix, int rows, int cols, char[] str, boolean[] visited,
-                                       int row, int col, int[] pathLength) {
+    private static boolean hasPathCore(
+            char[] matrix,
+            int rows,
+            int cols,
+            char[] str,
+            boolean[] visited,
+            int row,
+            int col,
+            int[] pathLength) {
 
         if (pathLength[0] == str.length) {
             return true;
@@ -64,8 +74,10 @@ public class No1201 {
         boolean hasPath = false;
 
         // 推断位置是否合法
-        if (row >= 0 && row < rows
-                && col >= 0 && col < cols
+        if (row >= 0
+                && row < rows
+                && col >= 0
+                && col < cols
                 && matrix[row * cols + col] == str[pathLength[0]]
                 && !visited[row * cols + col]) {
 
@@ -73,16 +85,19 @@ public class No1201 {
             pathLength[0]++;
 
             // 按左上右下进行回溯
-            hasPath = hasPathCore(matrix, rows, cols, str, visited, row, col - 1, pathLength)
-                    || hasPathCore(matrix, rows, cols, str, visited, row - 1, col, pathLength)
-                    || hasPathCore(matrix, rows, cols, str, visited, row, col + 1, pathLength)
-                    || hasPathCore(matrix, rows, cols, str, visited, row + 1, col, pathLength);
+            hasPath =
+                    hasPathCore(matrix, rows, cols, str, visited, row, col - 1, pathLength)
+                            || hasPathCore(
+                                    matrix, rows, cols, str, visited, row - 1, col, pathLength)
+                            || hasPathCore(
+                                    matrix, rows, cols, str, visited, row, col + 1, pathLength)
+                            || hasPathCore(
+                                    matrix, rows, cols, str, visited, row + 1, col, pathLength);
 
             if (!hasPath) {
                 pathLength[0]--;
                 visited[row * cols + col] = false;
             }
-
         }
 
         return hasPath;
@@ -90,7 +105,8 @@ public class No1201 {
 
     public static void main(String[] args) {
         No1201 no1201 = new No1201();
-        System.out.println(hasPath("ABCESFCSADEE".toCharArray(), 3, 4,
-                "ABCCED".toCharArray()) + "[true]");// true
+        System.out.println(
+                hasPath("ABCESFCSADEE".toCharArray(), 3, 4, "ABCCED".toCharArray())
+                        + "[true]"); // true
     }
 }

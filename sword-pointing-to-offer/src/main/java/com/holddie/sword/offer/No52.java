@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 两个链表的第一个公共结点
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -11,9 +12,8 @@ public class No52 {
 
     /**
      * 设 A 的长度为 a + c，B 的长度为 b + c，其中 c 为尾部公共部分长度，可知 a + c + b = b + c + a。
-     * <p>
-     * 当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部重新开始访问链表 B；同样地，
-     * 当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部重新开始访问链表 A。
+     *
+     * <p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部重新开始访问链表 B；同样地， 当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部重新开始访问链表 A。
      * 这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。
      */
     public ListNode findFirstCommonNode(ListNode pHead1, ListNode pHead2) {
@@ -51,6 +51,5 @@ public class No52 {
         listNode9.setNext(listNode10);
 
         System.out.println(no52.findFirstCommonNode(listNode1, listNode5));
-
     }
 }

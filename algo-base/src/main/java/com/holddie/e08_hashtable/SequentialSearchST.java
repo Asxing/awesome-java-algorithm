@@ -10,13 +10,10 @@ import java.util.LinkedList;
  */
 public class SequentialSearchST<Key, Value> {
 
-    /**
-     * 链表头结点
-     */
+    /** 链表头结点 */
     private Node head;
 
-    SequentialSearchST() {
-    }
+    SequentialSearchST() {}
 
     /**
      * get
@@ -39,7 +36,7 @@ public class SequentialSearchST<Key, Value> {
     /**
      * put方法
      *
-     * @param key   key
+     * @param key key
      * @param value value
      */
     void put(Key key, Value value) {

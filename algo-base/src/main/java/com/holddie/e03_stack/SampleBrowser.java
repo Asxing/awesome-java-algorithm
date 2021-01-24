@@ -2,7 +2,7 @@ package com.holddie.e03_stack;
 
 /**
  * 使用前后栈实现浏览器的前进后退。
- * 
+ *
  * @author chinalwb
  */
 public class SampleBrowser {
@@ -84,26 +84,24 @@ public class SampleBrowser {
         System.out.println("Current page is: " + this.currentPage);
     }
 
-    /**
-     * A LinkedList based Stack implementation.
-     */
+    /** A LinkedList based Stack implementation. */
     public static class LinkedListBasedStack {
 
-//        public static void main(String[] args) {
-//            LinkedListBasedStack stack = new LinkedListBasedStack();
-//            stack.push("A");
-//            stack.push("B");
-//            stack.push("C");
-//            stack.pop();
-//            stack.push("D");
-//            stack.push("E");
-//            stack.pop();
-//            stack.push("F");
-//            stack.print();
-//
-////        String data = stack.getTopData();
-////        System.out.println("Top data == " + data);
-//        }
+        //        public static void main(String[] args) {
+        //            LinkedListBasedStack stack = new LinkedListBasedStack();
+        //            stack.push("A");
+        //            stack.push("B");
+        //            stack.push("C");
+        //            stack.pop();
+        //            stack.push("D");
+        //            stack.push("E");
+        //            stack.pop();
+        //            stack.push("F");
+        //            stack.print();
+        //
+        ////        String data = stack.getTopData();
+        ////        System.out.println("Top data == " + data);
+        //        }
 
         private int size;
         private Node top;
@@ -188,6 +186,5 @@ public class SampleBrowser {
                 return this.next;
             }
         }
-
     }
 }

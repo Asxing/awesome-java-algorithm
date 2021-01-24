@@ -1,26 +1,19 @@
 package com.holddie.leetCode;
 
-
 import java.util.Arrays;
 import java.util.HashSet;
 
 public class Intersection {
     /**
      * 给定两个数组，编写一个函数来计算它们的交集。
-     * <p>
-     * 示例 1:
-     * <p>
-     * 输入: nums1 = [1,2,2,1], nums2 = [2,2]
-     * 输出: [2]
-     * 示例 2:
-     * <p>
-     * 输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-     * 输出: [9,4]
-     * 说明:
-     * <p>
-     * 输出结果中的每个元素一定是唯一的。
-     * 我们可以不考虑输出结果的顺序。
-     * retainAll
+     *
+     * <p>示例 1:
+     *
+     * <p>输入: nums1 = [1,2,2,1], nums2 = [2,2] 输出: [2] 示例 2:
+     *
+     * <p>输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4] 输出: [9,4] 说明:
+     *
+     * <p>输出结果中的每个元素一定是唯一的。 我们可以不考虑输出结果的顺序。 retainAll
      *
      * @param nums1 数组一
      * @param nums2 数组二
@@ -56,7 +49,9 @@ public class Intersection {
             set2.add(n);
         }
         // retainAll A.retainAll(B) A去重，去掉包含B的部分
-        return nums1.length > nums2.length ? setIntersection(set2, set1) : setIntersection(set1, set2);
+        return nums1.length > nums2.length
+                ? setIntersection(set2, set1)
+                : setIntersection(set1, set2);
     }
 
     private int[] setIntersection(HashSet<Integer> set2, HashSet<Integer> set1) {

@@ -1,14 +1,12 @@
 package com.holddie.string;
 
-/**
- * 朴素匹配算法
- */
+/** 朴素匹配算法 */
 public class BFArithmetic {
 
     /**
      * bf 算法
      *
-     * @param txt     主串
+     * @param txt 主串
      * @param pattern 模式串
      * @return 位置
      */
@@ -30,7 +28,7 @@ public class BFArithmetic {
     /**
      * bf 算法的变体 显式回退
      *
-     * @param txt     主串
+     * @param txt 主串
      * @param pattern 模式串
      * @return 位置
      */
@@ -63,7 +61,7 @@ public class BFArithmetic {
         String pattern = "world";
         int res = bf.bfSearch(txt, pattern);
         System.out.println("BF算法匹配结果:" + res);
-//        int resT = bf.bfSearchT(txt, pattern);
-//        System.out.println("BF算法(显示回退)匹配结果:" + resT);
+        //        int resT = bf.bfSearchT(txt, pattern);
+        //        System.out.println("BF算法(显示回退)匹配结果:" + resT);
     }
 }

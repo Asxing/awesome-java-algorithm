@@ -8,39 +8,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lc064Test {
 
-	private Lc064 lc064UnderTest;
+    private Lc064 lc064UnderTest;
 
-	@BeforeEach
-	void setUp() {
-		lc064UnderTest = new Lc064();
-	}
+    @BeforeEach
+    void setUp() {
+        lc064UnderTest = new Lc064();
+    }
 
-	@AfterEach
-	void tearDown() {
-	}
+    @AfterEach
+    void tearDown() {}
 
-	@Test
-	void testMinPathSum() {
-		// Setup
-		final int[][] grid = new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
+    @Test
+    void testMinPathSum() {
+        // Setup
+        final int[][] grid = new int[][] {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
 
-		// Run the test
-		final int result = lc064UnderTest.minPathSum(grid);
+        // Run the test
+        final int result = lc064UnderTest.minPathSum(grid);
 
-		// Verify the results
-		assertEquals(7, result);
-	}
+        // Verify the results
+        assertEquals(7, result);
+    }
 
+    @Test
+    void testMinPathSumWay1() {
+        // Setup
+        final int[][] grid = new int[][] {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
 
-	@Test
-	void testMinPathSumWay1() {
-		// Setup
-		final int[][] grid = new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
+        // Run the test
+        final int result = lc064UnderTest.minPathSumWay1(grid);
 
-		// Run the test
-		final int result = lc064UnderTest.minPathSumWay1(grid);
-
-		// Verify the results
-		assertEquals(7, result);
-	}
+        // Verify the results
+        assertEquals(7, result);
+    }
 }

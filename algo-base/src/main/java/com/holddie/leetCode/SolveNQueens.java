@@ -1,20 +1,12 @@
 package com.holddie.leetCode;
 
-/**
- * N皇后
- */
+/** N皇后 */
 public class SolveNQueens {
-    /**
-     * 皇后数组
-     */
+    /** 皇后数组 */
     private int[] queens;
-    /**
-     * n皇后
-     */
+    /** n皇后 */
     private int n;
-    /**
-     * 摆法数量
-     */
+    /** 摆法数量 */
     private int count;
 
     /**
@@ -29,8 +21,7 @@ public class SolveNQueens {
     }
 
     /**
-     * ]
-     * 调用方式 calNQueens(0)从0开始遍历
+     * ] 调用方式 calNQueens(0)从0开始遍历
      *
      * @param row 行
      */
@@ -55,7 +46,7 @@ public class SolveNQueens {
      * @return 返回值
      */
     private boolean isSatisfy(int row, int col) {
-//        System.out.println("(" + row + "," + col + ")");
+        //        System.out.println("(" + row + "," + col + ")");
         int leftUp = col - 1;
         int rightUp = col + 1;
         for (int i = row - 1; i >= 0; --i) {

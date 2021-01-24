@@ -7,13 +7,13 @@ import java.util.Queue;
 
 /**
  * 按之字形顺序打印二叉树
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
  * @date 2018/5/31 9:20
  */
 public class No3202 {
-
 
     private ArrayList<ArrayList<Integer>> print(TreeNode node) {
         ArrayList<ArrayList<Integer>> arrayLists = new ArrayList<>();
@@ -62,6 +62,4 @@ public class No3202 {
 
         System.out.println(no3202.print(treeNode1));
     }
-
-
 }

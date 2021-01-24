@@ -6,13 +6,13 @@ import java.util.Queue;
 
 /**
  * 把二叉树打印成多行
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
  * @date 2018/5/31 8:49
  */
 public class No3201 {
-
 
     private ArrayList<ArrayList<Integer>> print(TreeNode root) {
         ArrayList<ArrayList<Integer>> arrayLists = new ArrayList<>();

@@ -2,6 +2,7 @@ package com.holddie.sword.offer;
 
 /**
  * 反转链表
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -11,6 +12,7 @@ public class No24 {
 
     /**
      * 递归方式反转链表
+     *
      * @param head 链表头
      * @return ListNode
      * @author HoldDie
@@ -30,6 +32,7 @@ public class No24 {
 
     /**
      * 递归方式反转链表
+     *
      * @param head 链表头
      * @return ListNode
      * @author HoldDie
@@ -47,5 +50,4 @@ public class No24 {
         }
         return newListNodes;
     }
-
 }
