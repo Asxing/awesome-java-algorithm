@@ -1,6 +1,5 @@
 package com.holddie.leetCode;
 
-
 /** 同构字符串 */
 public class IsIsomorphic {
     /**
