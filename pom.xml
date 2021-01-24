@@ -12,6 +12,7 @@
         <module>sword-pointing-to-offer</module>
         <module>leetcode</module>
         <module>sword-pointing-to-offer</module>
-    </modules>
+		<module>algo-base</module>
+	</modules>
 
 </project>

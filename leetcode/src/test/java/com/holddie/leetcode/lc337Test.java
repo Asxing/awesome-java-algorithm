@@ -1,7 +1,5 @@
 package com.holddie.leetcode;
 
-import com.holddie.leetcode.TreeNode;
-import com.holddie.leetcode.lc337;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class lc337Test {
 
-	private lc337 lc337UnderTest;
+	private Lc337 lc337UnderTest;
 
 	@BeforeEach
 	void setUp() {
-		lc337UnderTest = new lc337();
+		lc337UnderTest = new Lc337();
 	}
 
 	@Test

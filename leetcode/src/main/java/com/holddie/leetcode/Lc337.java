@@ -49,7 +49,7 @@ import java.util.Map;
  * TreeNode(int x) { val = x; }
  * }
  */
-class lc337 {
+class Lc337 {
     Map<TreeNode, Integer> f = new HashMap<>();
     Map<TreeNode, Integer> g = new HashMap<>();
 
