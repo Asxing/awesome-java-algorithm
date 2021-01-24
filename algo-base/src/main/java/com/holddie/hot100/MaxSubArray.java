@@ -11,7 +11,7 @@ public class MaxSubArray {
      * @param nums
      * @return
      */
-    public int solution(int[] nums) {
+    public static int solution(int[] nums) {
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -30,9 +30,9 @@ public class MaxSubArray {
         return res;
     }
 
-    public int solution1(int[] nums) {
+    public static int solution1(int[] nums) {
         // 边界条件
-        int sum = 0;
+        int sum = Integer.MIN_VALUE;
         int res = nums[0];
         for (int i = 0; i < nums.length; i++) {
             sum = sum > 0 ? sum + nums[i] : nums[i];
@@ -41,5 +41,10 @@ public class MaxSubArray {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println(solution1(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 }

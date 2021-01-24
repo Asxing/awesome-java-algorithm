@@ -42,4 +42,9 @@ public class LengthOfLongestSubstring {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
+        System.out.println(lengthOfLongestSubstring.solution("abcabcbb"));
+    }
 }
