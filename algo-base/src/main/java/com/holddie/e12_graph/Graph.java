@@ -37,6 +37,9 @@ public class Graph {
 
     /**
      * 广度优先搜索
+     * visited: 记录某顶点是否浏览过;</br>
+     * queue: 存储已经被访问、但相连的顶点还没有被访问的顶点;</br>
+     * prev: 记录搜索路径;</br>
      *
      * @param oSide 顺序边
      * @param rSide 逆序边
@@ -89,11 +92,17 @@ public class Graph {
 
     /**
      * 递归
+     * <p>
+     * visited: 记录某顶点是否浏览过;<p>
+     * queue: 存储已经被访问、但相连的顶点还没有被访问的顶点;</br>
+     * prev: 记录搜索路径;</br>
+     * found: 当我们已经找到终止顶点 t 之后，我们就不再递归地继续查找了。
+     * <p>
      *
      * @param visited visited
-     * @param prev prev
-     * @param oSide 顺序边
-     * @param rSide 逆序边
+     * @param prev    prev
+     * @param oSide   顺序边
+     * @param rSide   逆序边
      */
     private void recursiveDfs(boolean[] visited, int[] prev, int oSide, int rSide) {
         if (found) return;

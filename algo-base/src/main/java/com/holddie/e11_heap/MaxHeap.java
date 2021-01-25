@@ -26,7 +26,9 @@ public class MaxHeap {
      * @param data 数据
      */
     public void insert(int data) {
-        if (count >= size) return;
+        if (count >= size) {
+            return;
+        }
         arrays[++count] = data;
         int i = count;
         while (i / 2 > 0 && arrays[i] > arrays[i / 2]) {
@@ -37,7 +39,9 @@ public class MaxHeap {
 
     /** 移除堆顶元素 */
     public int removeMax() {
-        if (count == 0) return -1;
+        if (count == 0) {
+            return -1;
+        }
         int res = arrays[1];
         arrays[1] = arrays[count];
         --count;
@@ -55,9 +59,15 @@ public class MaxHeap {
     public void heapify(int[] arrays, int count, int i) {
         while (true) {
             int max = i;
-            if (i * 2 <= count && arrays[i] < arrays[i * 2]) max = i * 2;
-            if (i * 2 + 1 <= count && arrays[max] < arrays[i * 2 + 1]) max = i * 2 + 1;
-            if (max == i) break;
+            if (i * 2 <= count && arrays[i] < arrays[i * 2]) {
+                max = i * 2;
+            }
+            if (i * 2 + 1 <= count && arrays[max] < arrays[i * 2 + 1]) {
+                max = i * 2 + 1;
+            }
+            if (max == i) {
+                break;
+            }
             swap(arrays, i, max);
             i = max;
         }
