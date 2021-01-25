@@ -207,179 +207,175 @@
 
 ### 数组
 
-- 数组插入元素
+#### 数组插入元素
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124544.jpg)
 
-- 动态数组扩容
+#### 动态数组扩容
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124552.jpg)
 
-- 两个有序数组合并
+#### 两个有序数组合并
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124559.jpg)
 
 ### 链表
 
-- 实现单链表、循环链表、双向链表，支持增删操作
+#### 实现单链表、循环链表、双向链表，支持增删操作
 
-- 实现单链表反转
+#### 实现单链表反转
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124608.jpg) 
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124616.jpg)
 
-- 实现两个有序的链表合并为一个有序链表
+#### 实现两个有序的链表合并为一个有序链表
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124627.jpg)
 
-- 链表检测有环
+#### 链表检测有环
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124641.jpg)
 
-- 实现求链表的中间结点
+#### 实现求链表的中间结点
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124652.jpg)
 
-- 删除倒数第K个元素
+#### 删除倒数第K个元素
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124659.jpg)
 
 ### 栈
 
-- 用数组实现一个顺序栈
+#### 用数组实现一个顺序栈
   
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124708.jpg)
 
-- 用链表实现一个链式栈 
+#### 用链表实现一个链式栈 
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124718.jpg)
 
-- 编程模拟实现一个浏览器的前进、后退功能
+#### 编程模拟实现一个浏览器的前进、后退功能
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124727.jpg)
 
 ### 队列
 
-- 用数组实现一个顺序队列
+#### 用数组实现一个顺序队列
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124737.jpg)
 
-- 用链表实现一个链式队列
+#### 用链表实现一个链式队列
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124801.jpg)
 
-- 实现一个循环队列
+#### 实现一个循环队列
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124815.jpg)
 
 ### 递归
 
-- 编程实现斐波那契数列求值f(n)=f(n-1)+f(n-2) 
+#### 编程实现斐波那契数列求值f(n)=f(n-1)+f(n-2) 
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124823.jpg)
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124832.jpg)
-- 编程实现求阶乘n!
+#### 编程实现求阶乘n!
   
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124845.jpg)
 
-- 编程实现一组数据集合的全排列
+#### 编程实现一组数据集合的全排列
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124933.jpg)
 
 ### 排序
 
-- 归并排序
+#### 归并排序
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124942.jpg)
 
-- 插入排序
+#### 插入排序
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125124957.jpg)
 
-- 冒泡排序
+#### 冒泡排序
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125006.jpg)
 
-- 选择排序
+#### 选择排序
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125016.jpg)
 
-- 快速排序
+#### 快速排序
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125037.jpg)
 
-- 编程实现O(n)时间复杂度内找到一组数据的第K大元素
+#### 编程实现O(n)时间复杂度内找到一组数据的第K大元素
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125047.jpg)
 
 ### 二分查找
 
-- 实现一个有序数组的二分查找算法
+#### 实现一个有序数组的二分查找算法
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125055.jpg)
 
-- 查找方程根
+#### 查找方程根
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125104.jpg)
 
-- 实现模糊二分查找算法（比如大于等于给定值的第一个元素）
+#### 实现模糊二分查找算法（比如大于等于给定值的第一个元素）
 
-    - 计算下边界
+  - 计算下边界
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125112.jpg)
-
-    - 计算上边界
+  - 计算上边界
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125128.jpg)
-
-    - 找出第一个大于 x 的数
+  - 找出第一个大于 x 的数
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125138.jpg)
-
-    - 找出第一个小于 x 的数
+  - 找出第一个小于 x 的数
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125147.jpg)
 
 ### 散列表
 
-- 实现一个基于链表法解决冲突问题的散列表
+#### 实现一个基于链表法解决冲突问题的散列表
   ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125156.jpg)
 
-- 实现一个LRU缓存淘汰算法
+#### 实现一个LRU缓存淘汰算法
 
-    - 基于链表实现
+- 基于链表实现
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125202.jpg)
-
-    - 基于数组实现
+- 基于数组实现
       ![img](https://cdn.jsdelivr.net/gh/HoldDie/img1/20210125125211.jpg)
 
 ### 字符串
 
-- 实现一个字符集，只包含a～z这26个英文字母的Trie树
+#### 实现一个字符集，只包含a～z这26个英文字母的Trie树
 
-- 实现朴素的字符串匹配算法
+#### 实现朴素的字符串匹配算法
 
 ### 二叉树
 
-- 实现一个二叉查找树，并且支持插入、删除、查找操作
+#### 实现一个二叉查找树，并且支持插入、删除、查找操作
 
-- 实现查找二叉查找树中某个节点的后继、前驱节点
+#### 实现查找二叉查找树中某个节点的后继、前驱节点
 
-- 实现二叉树前、中、后序以及按层遍历
+#### 实现二叉树前、中、后序以及按层遍历
 
 ### 堆
 
-- 实现一个小顶堆、大顶堆、优先级队列
+#### 实现一个小顶堆、大顶堆、优先级队列
 
-- 实现堆排序
+#### 实现堆排序
 
-- 利用优先级队列合并K个有序数组
+#### 利用优先级队列合并K个有序数组
 
-- 求一组动态数据集合的最大Top K
+#### 求一组动态数据集合的最大Top K
 
 ### 图
 
-- 实现有向图、无向图、有权图、无权图的邻接矩阵和邻接表表示方法
+#### 实现有向图、无向图、有权图、无权图的邻接矩阵和邻接表表示方法
 
-- 实现图的深度优先搜索、广度优先搜索
+#### 实现图的深度优先搜索、广度优先搜索
 
-- 实现Dijkstra算法、A*算法
+#### 实现Dijkstra算法、A*算法
 
-- 实现拓扑排序的Kahn算法、DFS算法
+#### 实现拓扑排序的Kahn算法、DFS算法
 
 ### 回溯
 
-- 利用回溯算法求解八皇后问题
+#### 利用回溯算法求解八皇后问题
 
-- 利用回溯算法求解0-1背包问题
+#### 利用回溯算法求解0####1背包问题
 
 ### 分治
 
-- 利用分治算法求一组数据的逆序对个数
+#### 利用分治算法求一组数据的逆序对个数
 
 ### 动态规划
 
-- 0-1背包问题
+#### 0-1背包问题
 
-- 最小路径和
+#### 最小路径和
 
-- 编程实现莱文斯坦最短编辑距离
+#### 编程实现莱文斯坦最短编辑距离
 
-- 编程实现查找两个字符串的最长公共子序列
+#### 编程实现查找两个字符串的最长公共子序列
 
-- 编程实现一个数据序列的最长递增子序列
+#### 编程实现一个数据序列的最长递增子序列
 
 
