@@ -18,7 +18,6 @@ public class FindKthLargest {
         } else if (pivot < k - 1) {
             return findKByQuick(arrays, pivot + 1, tail, k);
         }
-        //        pivot == k - 1
         System.out.println("k = " + (pivot + 1));
         printAll(arrays);
         return arrays[pivot];
@@ -37,16 +36,18 @@ public class FindKthLargest {
         int pivot = head;
         for (int j = head; j < tail; j++) {
             if (last < arrays[j]) {
-                int tmp = arrays[pivot];
-                arrays[pivot] = arrays[j];
-                arrays[j] = tmp;
+                swap(arrays, pivot, j);
                 ++pivot;
             }
         }
-        int tmp = arrays[pivot];
-        arrays[pivot] = arrays[tail];
-        arrays[tail] = tmp;
+        swap(arrays, pivot, tail);
         return pivot;
+    }
+
+    private void swap(int[] arrays, int pivot, int j) {
+        int tmp = arrays[pivot];
+        arrays[pivot] = arrays[j];
+        arrays[j] = tmp;
     }
 
     private void printAll(int[] arrays) {

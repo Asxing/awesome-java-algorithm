@@ -1,5 +1,7 @@
 package com.holddie.leetCode;
 
+import java.util.Arrays;
+
 public class Compress {
     /**
      * 给定一组字符，使用原地算法将其压缩。 压缩后的长度必须始终小于或等于原数组长度。 数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。
@@ -20,27 +22,32 @@ public class Compress {
      * @return
      */
     public int solution(char[] chars) {
-        // 边界条件 双指针
-        // TODO
-        int anchor = 0, write = 0;
-        for (int read = 0; read < chars.length; read++) {
-            if (read + 1 == chars.length || chars[read + 1] != chars[read]) {
-                chars[write++] = chars[anchor];
-                if (read > anchor) {
-                    for (char c : ("" + (read - anchor + 1)).toCharArray()) {
-                        chars[write++] = c;
-                    }
-                }
-                anchor = read + 1;
+        StringBuilder sb = new StringBuilder();
+        int l = 0;
+        int r = 0;
+        int len = chars.length;
+        while (r < len){
+            r++;
+            while (r < len && chars[l] == chars[r]){
+                r++;
             }
+            sb.append(chars[l]);
+            if(r - l > 1){
+                sb.append(r - l);
+            }
+            l = r;
         }
-
-        return write;
+        String s = sb.toString();
+        for (int i = 0; i < s.length(); i++) {
+            chars[i] = s.charAt(i);
+        }
+        return s.length();
     }
 
     public static void main(String[] args) {
-        char[] chars = "aabbccc".toCharArray();
+        char[] chars = "aabbccddddd".toCharArray();
         int ans = new Compress().solution(chars);
         System.out.println("ans = " + ans);
+        System.out.println(Arrays.toString(chars));
     }
 }

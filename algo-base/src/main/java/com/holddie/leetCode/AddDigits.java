@@ -34,5 +34,7 @@ public class AddDigits {
         AddDigits addDigits = new AddDigits();
         int result = addDigits.solution(num);
         System.out.println("result = " + result);
+        result = addDigits.optimalSolution(num);
+        System.out.println("result = " + result);
     }
 }

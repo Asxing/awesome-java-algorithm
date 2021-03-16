@@ -1,5 +1,7 @@
 package com.holddie.leetCode;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -9,7 +11,8 @@ import java.util.Stack;
  * @date 2019/6/10
  */
 public class MinStack {
-    private Stack<Integer> stack;
+    Deque<Integer> xStack;
+    Deque<Integer> minStack;
 
     /**
      * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。 push(x) -- 将元素 x 推入栈中。 pop() -- 删除栈顶的元素。 top() --
@@ -18,36 +21,27 @@ public class MinStack {
      * minStack.top(); --> 返回 0. minStack.getMin(); --> 返回 -2.
      */
     public MinStack() {
-        stack = new Stack<>();
+        xStack = new LinkedList<>();
+        minStack = new LinkedList<>();
+        minStack.push(Integer.MAX_VALUE);
     }
 
     public void push(int x) {
-        if (stack.isEmpty()) {
-            stack.push(x);
-            stack.push(x);
-        } else {
-            int min = stack.peek();
-            stack.push(x);
-            if (min < x) {
-                stack.push(min);
-            } else {
-                stack.push(x);
-            }
-        }
+        xStack.push(x);
+        minStack.push(Math.min(minStack.peek(), x));
     }
 
     public void pop() {
-        stack.pop();
-        stack.pop();
+        xStack.pop();
+        minStack.pop();
     }
 
     public int top() {
-        System.out.println("size=" + stack.size());
-        return stack.get(stack.size() - 2);
+        return xStack.peek();
     }
 
     public int getMin() {
-        return stack.peek();
+        return minStack.peek();
     }
 
     public static void main(String[] args) {

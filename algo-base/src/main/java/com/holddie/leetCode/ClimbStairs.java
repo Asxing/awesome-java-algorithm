@@ -40,7 +40,8 @@ public class ClimbStairs {
 
     public static void main(String[] args) {
         ClimbStairs climbStairs = new ClimbStairs();
-        int n = 4;
+        int n = 3;
+        System.out.println(climbStairs.solution(n));
         System.out.println(climbStairs.climbStairs2(n));
     }
 }

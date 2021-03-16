@@ -21,9 +21,7 @@ public class ConvertToTitle {
         StringBuilder stringBuilder = new StringBuilder();
         while (n > 0) {
             --n;
-            System.out.println(n + " % 26 = " + (char) (n % 26 + 'A'));
             stringBuilder.append((char) (n % 26 + 'A'));
-            System.out.println(n + " / 26 = " + (n / 26));
             n /= 26;
         }
         return stringBuilder.reverse().toString();
