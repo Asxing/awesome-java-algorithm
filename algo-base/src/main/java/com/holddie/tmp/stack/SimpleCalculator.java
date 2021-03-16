@@ -11,21 +11,14 @@ import java.util.regex.Pattern;
  */
 public class SimpleCalculator {
 
-    /**
-     * 存储数值的栈
-     */
+    /** 存储数值的栈 */
     private Stack<Integer> valStack;
 
-    /**
-     * 存储运算符的栈
-     */
+    /** 存储运算符的栈 */
     private Stack<String> calStack;
 
-    /**
-     * 计算结果
-     */
+    /** 计算结果 */
     private Integer result;
-
 
     public SimpleCalculator() {
         valStack = new Stack<Integer>();
@@ -39,12 +32,12 @@ public class SimpleCalculator {
      * @return
      */
     public void process(String str) {
-//		这里不做非空检验,默认传入的值一定正确有效
+        //		这里不做非空检验,默认传入的值一定正确有效
         String[] strs = str.split(" ");
         for (int i = 0; i < strs.length; i++) {
-            if (isNumber(strs[i])) {// 数字
+            if (isNumber(strs[i])) { // 数字
                 valStack.push(Integer.valueOf(strs[i]));
-            } else {// 运算符
+            } else { // 运算符
                 calDeal(strs[i]);
             }
             print();
@@ -61,11 +54,9 @@ public class SimpleCalculator {
         calStack.clear();
     }
 
-    /**
-     * 准备计算
-     */
+    /** 准备计算 */
     private void calDeal(String opt) {
-        //出栈
+        // 出栈
         String calStar;
         if (!calStack.isEmpty()) {
             while (!calStack.isEmpty()) {
@@ -139,8 +130,7 @@ public class SimpleCalculator {
         String regex = "\\d+";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
-        if (matcher.find())
-            return true;
+        if (matcher.find()) return true;
         return false;
     }
 
@@ -156,5 +146,4 @@ public class SimpleCalculator {
         simpleCalculator.process(str);
         System.out.println(str + " = " + simpleCalculator.result);
     }
-
 }

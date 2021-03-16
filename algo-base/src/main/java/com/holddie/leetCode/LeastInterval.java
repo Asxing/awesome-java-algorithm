@@ -25,7 +25,7 @@ public class LeastInterval {
     }
 
     public static void main(String[] args) {
-        char[] tasks = new char[]{'A', 'A', 'A'};
+        char[] tasks = new char[] {'A', 'A', 'A'};
         System.out.println(leastInterval(tasks, 2));
     }
 }

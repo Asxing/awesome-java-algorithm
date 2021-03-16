@@ -1,17 +1,11 @@
 package com.holddie.tmp.tree;
 
-/**
- * AVL树
- */
+/** AVL树 */
 public class AVLTree {
-    /**
-     * 根
-     */
+    /** 根 */
     private Node root;
 
-    /**
-     * 插入
-     */
+    /** 插入 */
     private void insert(int data) {
         if (null == root) {
             root = new Node(data, null);
@@ -108,8 +102,7 @@ public class AVLTree {
         Node right = node.right;
         right.parent = node.parent;
         node.right = right.left;
-        if (null != node.right)
-            node.right.parent = node;
+        if (null != node.right) node.right.parent = node;
         right.left = node;
         node.parent = right;
         if (null != right.parent) {
@@ -133,8 +126,7 @@ public class AVLTree {
         Node left = node.left;
         left.parent = node.parent;
         node.left = left.right;
-        if (null != node.left)
-            node.left.parent = node;
+        if (null != node.left) node.left.parent = node;
         left.right = node;
         node.parent = left;
         if (null != left.parent) {
@@ -156,7 +148,7 @@ public class AVLTree {
     private void setBalance(Node... nodes) {
         for (Node node : nodes) {
             if (null != node) {
-                //重置高度
+                // 重置高度
                 node.height = Math.max(getHeight(node.left), getHeight(node.right)) + 1;
                 node.balance = getHeight(node.right) - getHeight(node.left);
             }
@@ -170,24 +162,23 @@ public class AVLTree {
      * @return 返回值
      */
     private int getHeight(Node node) {
-        if (null != node)
-            return node.height;
+        if (null != node) return node.height;
         return -1;
     }
 
     private void print() {
-//        TraversalTree traversalTree = new TraversalTree();
-//        System.out.println("前序遍历");
-//        traversalTree.preOrderTraversal(root);
-//        System.out.println();
-//        System.out.println("中序遍历");
-//        traversalTree.inOrderTraversal(root);
-//        System.out.println();
-//        System.out.println("后序遍历");
-//        traversalTree.postOrderTraversal(root);
-//        System.out.println();
-//        System.out.println("层级遍历");
-//        traversalTree.levelTraversal(root);
+        //        TraversalTree traversalTree = new TraversalTree();
+        //        System.out.println("前序遍历");
+        //        traversalTree.preOrderTraversal(root);
+        //        System.out.println();
+        //        System.out.println("中序遍历");
+        //        traversalTree.inOrderTraversal(root);
+        //        System.out.println();
+        //        System.out.println("后序遍历");
+        //        traversalTree.postOrderTraversal(root);
+        //        System.out.println();
+        //        System.out.println("层级遍历");
+        //        traversalTree.levelTraversal(root);
         print(root);
     }
 
@@ -205,39 +196,26 @@ public class AVLTree {
             avlTree.insert(i);
         }
         avlTree.print();
-
     }
 
     public class Node {
-        /**
-         * 数据
-         */
+        /** 数据 */
         int data;
-        /**
-         * 高度
-         */
+        /** 高度 */
         int height;
-        /**
-         * 平衡标识
-         */
+        /** 平衡标识 */
         int balance;
-        /**
-         * 左子树
-         */
+        /** 左子树 */
         Node left;
-        /**
-         * 右子树
-         */
+        /** 右子树 */
         Node right;
-        /**
-         * 根
-         */
+        /** 根 */
         Node parent;
 
         /**
          * 有参构造方法
          *
-         * @param data   数据
+         * @param data 数据
          * @param parent 父节点
          */
         Node(int data, Node parent) {

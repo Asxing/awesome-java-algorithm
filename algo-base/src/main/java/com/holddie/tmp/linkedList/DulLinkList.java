@@ -1,21 +1,13 @@
 package com.holddie.tmp.linkedList;
 
-/**
- * 双向链表
- */
+/** 双向链表 */
 public class DulLinkList {
-    /**
-     * 声明一个头结点
-     */
+    /** 声明一个头结点 */
     private DulNode head;
-    /**
-     * 声明一个尾部节点
-     */
+    /** 声明一个尾部节点 */
     private DulNode tail;
 
-    /**
-     * 链表数量
-     */
+    /** 链表数量 */
     private int count;
 
     private DulLinkList() {
@@ -66,10 +58,10 @@ public class DulLinkList {
      * 插入指定位置的数据
      *
      * @param index 索引
-     * @param data  数据
+     * @param data 数据
      */
     private void insertByIndex(int index, int data) {
-        if (index > count) {//放入链表尾部
+        if (index > count) { // 放入链表尾部
             insertToTail(data);
         } else {
             DulNode resNode = selectByIndex(index);
@@ -122,9 +114,8 @@ public class DulLinkList {
      * @param index 索引
      */
     private void deleteByIndex(int index) {
-        if (index > count)
-            return;
-        //删除这边加了个小技巧，如果是链表头部或者尾部，直接删除，中间值开始查找
+        if (index > count) return;
+        // 删除这边加了个小技巧，如果是链表头部或者尾部，直接删除，中间值开始查找
         if (index == 0) {
             deleteHead();
         } else if (index == count - 1) {

@@ -2,21 +2,13 @@ package com.holddie.tmp.lruAlgo;
 
 import java.util.stream.IntStream;
 
-/**
- * 基于数组实现
- */
+/** 基于数组实现 */
 public class LRUByArray {
-    /**
-     * 数组
-     */
+    /** 数组 */
     private int arrays[];
-    /**
-     * 数组长度
-     */
+    /** 数组长度 */
     private int size;
-    /**
-     * 数组中数据数量
-     */
+    /** 数组中数据数量 */
     private int count;
 
     /**
@@ -40,7 +32,7 @@ public class LRUByArray {
         if (-1 != index) {
             delete(index);
         } else {
-            if (count >= size) {//数组满
+            if (count >= size) { // 数组满
                 deleteToTail();
             }
         }
@@ -62,11 +54,9 @@ public class LRUByArray {
         ++count;
     }
 
-    /**
-     * 删除尾部元素
-     */
+    /** 删除尾部元素 */
     private void deleteToTail() {
-        --count;//标记删除法，实际上数组还存有该元素
+        --count; // 标记删除法，实际上数组还存有该元素
         System.out.println("删除尾部元素...");
     }
 
@@ -76,7 +66,7 @@ public class LRUByArray {
      * @param index 元素下标
      */
     private void delete(int index) {
-        //通过数据迁移的方式将该值删除
+        // 通过数据迁移的方式将该值删除
         for (int i = index + 1; i < count; i++) {
             arrays[i - 1] = arrays[i];
         }

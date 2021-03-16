@@ -24,8 +24,7 @@ public class WordBreak {
 
     public static void main(String[] args) {
         String s = "catsandog";
-        String[] wordDict = new String[]{"cats", "dog", "sand", "and", "cat"};
+        String[] wordDict = new String[] {"cats", "dog", "sand", "and", "cat"};
         System.out.println(wordBreak(s, Arrays.asList(wordDict)));
     }
-
 }

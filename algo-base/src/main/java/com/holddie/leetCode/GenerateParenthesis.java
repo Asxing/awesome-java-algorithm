@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateParenthesis {
-    
+
     public static List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
         backtrack(ans, new StringBuilder(), 0, 0, n);
         return ans;
     }
 
-    public static void backtrack(List<String> ans, StringBuilder cur, int open, int close, int max) {
+    public static void backtrack(
+            List<String> ans, StringBuilder cur, int open, int close, int max) {
         if (cur.length() == max * 2) {
             ans.add(cur.toString());
             return;

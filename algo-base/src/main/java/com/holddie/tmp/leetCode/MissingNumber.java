@@ -7,15 +7,12 @@ import java.util.Set;
 public class MissingNumber {
     /**
      * 给定一个包含 0, 1, 2, ..., n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。
-     * <p>
-     * 示例 1:
-     * <p>
-     * 输入: [3,0,1]
-     * 输出: 2
-     * 示例 2:
-     * <p>
-     * 输入: [9,6,4,2,3,5,7,0,1]
-     * 输出: 8
+     *
+     * <p>示例 1:
+     *
+     * <p>输入: [3,0,1] 输出: 2 示例 2:
+     *
+     * <p>输入: [9,6,4,2,3,5,7,0,1] 输出: 8
      *
      * @param nums 给定正整数数组
      * @return 返回缺失值
@@ -73,8 +70,8 @@ public class MissingNumber {
 
     public static void main(String[] args) {
         MissingNumber missingNumber = new MissingNumber();
-        int[] nums = {0,1};
-//        int[] nums = {9, 6, 4, 2, 3, 5, 7, 0, 1};
+        int[] nums = {0, 1};
+        //        int[] nums = {9, 6, 4, 2, 3, 5, 7, 0, 1};
         int result = missingNumber.solution2(nums);
         System.out.println("result = " + result);
     }

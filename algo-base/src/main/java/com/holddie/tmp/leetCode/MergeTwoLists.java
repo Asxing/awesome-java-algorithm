@@ -1,9 +1,7 @@
 package com.holddie.tmp.leetCode;
 
 /**
- * 合并两个有序链表
- * 1 -> 2 -> 4   1 -> 3 -> 4
- * 1 -> 1 -> 2 -> 3 -> 4 -> 4
+ * 合并两个有序链表 1 -> 2 -> 4 1 -> 3 -> 4 1 -> 1 -> 2 -> 3 -> 4 -> 4
  *
  * @author liuchao
  * @date 2019/5/23
@@ -17,7 +15,7 @@ public class MergeTwoLists {
      * @return 返回合并后的链表
      */
     public ListNode solution(ListNode l1, ListNode l2) {
-        //边界条件判断
+        // 边界条件判断
         if (null == l1) {
             return l2;
         }
@@ -53,7 +51,6 @@ public class MergeTwoLists {
         }
         return node;
     }
-
 
     public static class ListNode {
         int val;

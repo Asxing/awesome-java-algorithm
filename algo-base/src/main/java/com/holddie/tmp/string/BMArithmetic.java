@@ -1,13 +1,9 @@
 package com.holddie.tmp.string;
 
-/**
- * BM算法
- */
+/** BM算法 */
 public class BMArithmetic {
 
-    /**
-     * 字母表长度
-     */
+    /** 字母表长度 */
     private int aLen;
 
     private BMArithmetic() {
@@ -17,7 +13,7 @@ public class BMArithmetic {
     /**
      * BM
      *
-     * @param txt     主串
+     * @param txt 主串
      * @param pattern 模式串
      * @return 返回值
      */
@@ -32,7 +28,7 @@ public class BMArithmetic {
         int[] suffix = new int[pLen];
         boolean[] prefix = new boolean[pLen];
         generateGS(patChars, suffix, prefix);
-        //主串与模式串对齐的第一个字符
+        // 主串与模式串对齐的第一个字符
         int index = 0;
         while (index <= tLen - pLen) {
             int i = pLen - 1;
@@ -58,8 +54,8 @@ public class BMArithmetic {
     /**
      * 移动
      *
-     * @param index  坏字符对应的模式串中的字符下标
-     * @param pLen   模式串长度
+     * @param index 坏字符对应的模式串中的字符下标
+     * @param pLen 模式串长度
      * @param suffix 在模式串中，查找跟好后缀匹配的另一个子串
      * @param prefix 记录模式串的后缀子串是否能匹配模式串的前缀子串
      * @return 返回值
@@ -68,8 +64,7 @@ public class BMArithmetic {
         int k = pLen - 1 - index; // 好后缀长度
         if (suffix[k] != -1) return index - suffix[k] + 1;
         for (int i = index + 2; i <= pLen - 1; i++) {
-            if (prefix[pLen - i])
-                return i;
+            if (prefix[pLen - i]) return i;
         }
         return -1;
     }
@@ -78,7 +73,7 @@ public class BMArithmetic {
      * 构建坏字符哈希表
      *
      * @param patChars 模式串
-     * @param records  记录表
+     * @param records 记录表
      */
     private void generateBC(char[] patChars, int[] records) {
         for (int i = 0; i < aLen; i++) {
@@ -97,8 +92,8 @@ public class BMArithmetic {
      * 好后缀
      *
      * @param patChars 模式串
-     * @param suffix   在模式串中，查找跟好后缀匹配的另一个子串
-     * @param prefix   记录模式串的后缀子串是否能匹配模式串的前缀子串
+     * @param suffix 在模式串中，查找跟好后缀匹配的另一个子串
+     * @param prefix 记录模式串的后缀子串是否能匹配模式串的前缀子串
      */
     private void generateGS(char[] patChars, int[] suffix, boolean[] prefix) {
         int pLen = patChars.length;
@@ -113,7 +108,7 @@ public class BMArithmetic {
             while (j >= 0 && patChars[j] == patChars[pLen - 1 - k]) {
                 --j;
                 ++k;
-                //j+1 表示公共后缀子串在 patChars[0, i] 中的起始下标
+                // j+1 表示公共后缀子串在 patChars[0, i] 中的起始下标
                 suffix[k] = j + 1;
             }
             // 如果公共后缀子串也是模式串的前缀子串
@@ -123,8 +118,7 @@ public class BMArithmetic {
 
     private void print(int[] arrays) {
         for (int i = 0; i < arrays.length; i++) {
-            if (arrays[i] != -1)
-                System.out.println(i + " -- " + arrays[i]);
+            if (arrays[i] != -1) System.out.println(i + " -- " + arrays[i]);
         }
         System.out.println();
     }

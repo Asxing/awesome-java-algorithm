@@ -1,9 +1,8 @@
 package com.holddie.tmp.other;
 
 /**
- * snowflake 算法是 twitter 开源的分布式 id 生成算法，采用 Scala 语言实现，
- * 是把一个 64 位的 long 型的 id，1 个 bit 是不用的，用其中的 41 bit 作为毫秒数，
- * 用 10 bit 作为工作机器 id，12 bit 作为序列号。
+ * snowflake 算法是 twitter 开源的分布式 id 生成算法，采用 Scala 语言实现， 是把一个 64 位的 long 型的 id，1 个 bit 是不用的，用其中的 41
+ * bit 作为毫秒数， 用 10 bit 作为工作机器 id，12 bit 作为序列号。
  */
 public class IdWorker {
     private long workerId;
@@ -15,11 +14,8 @@ public class IdWorker {
     private long workerIdBits = 5L;
     private long datacenterIdBits = 5L;
 
-    /**
-     * 这个是二进制运算，就是 5 bit最多只能有31个数字，也就是说机器id最多只能是32以内
-     */
+    /** 这个是二进制运算，就是 5 bit最多只能有31个数字，也就是说机器id最多只能是32以内 */
     private long maxWorkerId = -1L ^ (-1L << workerIdBits);
-
 
     private long maxDatacenterId = -1L ^ (-1L << datacenterIdBits);
     private long sequenceBits = 12L;
@@ -34,11 +30,14 @@ public class IdWorker {
     public IdWorker(long workerId, long datacenterId, long sequence) {
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(
-                    String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
+                    String.format(
+                            "worker Id can't be greater than %d or less than 0", maxWorkerId));
         }
         if (datacenterId > maxDatacenterId || datacenterId < 0) {
             throw new IllegalArgumentException(
-                    String.format("datacenter Id can't be greater than %d or less than 0", maxDatacenterId));
+                    String.format(
+                            "datacenter Id can't be greater than %d or less than 0",
+                            maxDatacenterId));
         }
         System.out.printf(
                 "worker starting. timestamp left shift %d, datacenter id bits %d, worker id bits %d, sequence bits %d, workerid %d",
@@ -48,6 +47,7 @@ public class IdWorker {
         this.datacenterId = datacenterId;
         this.sequence = sequence;
     }
+
     public long getWorkerId() {
         return workerId;
     }
@@ -65,9 +65,12 @@ public class IdWorker {
         long timestamp = timeGen();
 
         if (timestamp < lastTimestamp) {
-            System.err.printf("clock is moving backwards.  Rejecting requests until %d.", lastTimestamp);
-            throw new RuntimeException(String.format(
-                    "Clock moved backwards.  Refusing to generate id for %d milliseconds", lastTimestamp - timestamp));
+            System.err.printf(
+                    "clock is moving backwards.  Rejecting requests until %d.", lastTimestamp);
+            throw new RuntimeException(
+                    String.format(
+                            "Clock moved backwards.  Refusing to generate id for %d milliseconds",
+                            lastTimestamp - timestamp));
         }
 
         if (lastTimestamp == timestamp) {
@@ -88,8 +91,10 @@ public class IdWorker {
         // 将机房 id左移放到 5 bit那儿；
         // 将机器id左移放到5 bit那儿；将序号放最后12 bit；
         // 最后拼接起来成一个 64 bit的二进制数字，转换成 10 进制就是个 long 型
-        return ((timestamp - twepoch) << timestampLeftShift) | (datacenterId << datacenterIdShift)
-                | (workerId << workerIdShift) | sequence;
+        return ((timestamp - twepoch) << timestampLeftShift)
+                | (datacenterId << datacenterIdShift)
+                | (workerId << workerIdShift)
+                | sequence;
     }
 
     private long tilNextMillis(long lastTimestamp) {

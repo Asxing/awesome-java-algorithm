@@ -17,7 +17,6 @@ public class LowestCommonAncestor {
         return lson || rson || (root.val == p.val || root.val == q.val);
     }
 
-
     private boolean dfs1(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return false;
@@ -34,5 +33,4 @@ public class LowestCommonAncestor {
         this.dfs(root, p, q);
         return this.ans;
     }
-
 }

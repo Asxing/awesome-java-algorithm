@@ -14,7 +14,12 @@ public class CombinationSum {
         return res;
     }
 
-    private void backtrack(int[] candidates, int target, List<List<Integer>> res, int i, ArrayList<Integer> tmpList) {
+    private void backtrack(
+            int[] candidates,
+            int target,
+            List<List<Integer>> res,
+            int i,
+            ArrayList<Integer> tmpList) {
         if (target < 0) {
             return;
         }

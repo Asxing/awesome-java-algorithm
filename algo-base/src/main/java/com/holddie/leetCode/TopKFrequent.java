@@ -1,6 +1,5 @@
 package com.holddie.leetCode;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -21,10 +20,10 @@ public class TopKFrequent {
                 assert queue.peek() != null;
                 if (queue.peek()[1] < value) {
                     queue.poll();
-                    queue.offer(new int[]{num, value});
+                    queue.offer(new int[] {num, value});
                 }
             } else {
-                queue.offer(new int[]{num, value});
+                queue.offer(new int[] {num, value});
             }
         }
         int len = Math.min(queue.size(), k);
@@ -34,5 +33,4 @@ public class TopKFrequent {
         }
         return num;
     }
-
 }

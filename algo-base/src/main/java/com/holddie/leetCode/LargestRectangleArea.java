@@ -43,7 +43,7 @@ public class LargestRectangleArea {
     }
 
     public static void main(String[] args) {
-        int[] heights = new int[]{2, 1, 5, 6, 2, 3};
+        int[] heights = new int[] {2, 1, 5, 6, 2, 3};
         Assertions.assertThat(largestRectangleArea1(heights)).isEqualTo(10);
     }
 }

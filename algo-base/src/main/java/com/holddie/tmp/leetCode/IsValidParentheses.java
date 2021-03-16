@@ -10,12 +10,7 @@ import java.util.Stack;
  */
 public class IsValidParentheses {
     /**
-     * 规则
-     * () true
-     * ()[]{} true
-     * {[]} true
-     * (] false
-     * ([)] false
+     * 规则 () true ()[]{} true {[]} true (] false ([)] false
      *
      * @param s 字符串
      * @return 返回结果
@@ -24,15 +19,15 @@ public class IsValidParentheses {
         Stack<Character> stack = new Stack<>();
         char[] chars = s.toCharArray();
         for (char c : chars) {
-           if (stack.isEmpty()){
-               stack.push(c);
-           }else if (checkFull(stack.peek(),c)){
-               stack.pop();
-           }else{
-               stack.push(c);
-           }
+            if (stack.isEmpty()) {
+                stack.push(c);
+            } else if (checkFull(stack.peek(), c)) {
+                stack.pop();
+            } else {
+                stack.push(c);
+            }
         }
-        if (stack.isEmpty()){
+        if (stack.isEmpty()) {
             return true;
         }
         return false;
@@ -40,12 +35,15 @@ public class IsValidParentheses {
 
     /**
      * 校验是否完整
+     *
      * @param prev 栈里的
      * @param current 当前
      * @return 返回结果
      */
     private boolean checkFull(Character prev, char current) {
-        return (prev == '(' && current == ')') || (prev == '[' && current == ']') || (prev == '{' && current == '}');
+        return (prev == '(' && current == ')')
+                || (prev == '[' && current == ']')
+                || (prev == '{' && current == '}');
     }
 
     public static void main(String[] args) {

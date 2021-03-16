@@ -3,20 +3,15 @@ package com.holddie.tmp.queue;
 import juejin.lc.linkedList.Node;
 
 /**
- * 1.基于链表实现的链式队列
- * 2.队列中元素类型为int
+ * 1.基于链表实现的链式队列 2.队列中元素类型为int
  *
  * @author mic
  */
 public class LinkedQueue {
 
-    /**
-     * 队列队头下标
-     */
+    /** 队列队头下标 */
     private Node head;
-    /**
-     * 队列的队尾下标
-     */
+    /** 队列的队尾下标 */
     private Node tail;
 
     /**
@@ -42,7 +37,7 @@ public class LinkedQueue {
      * @return
      */
     public int dequeue() {
-        if (head == null) return -1;//-1表示队空
+        if (head == null) return -1; // -1表示队空
         int res = head.data;
         head = head.next;
         if (head == null) {
@@ -65,14 +60,13 @@ public class LinkedQueue {
     public static void main(String[] args) {
         LinkedQueue linkedQueue = new LinkedQueue();
         for (int i = 1; i < 6; i++) {
-            //入队
+            // 入队
             linkedQueue.enqueue(i);
         }
         linkedQueue.printAll();
-        //出队
+        // 出队
         int num = linkedQueue.dequeue();
         System.out.println("出队：" + num);
         linkedQueue.printAll();
     }
-
 }

@@ -1,21 +1,12 @@
 package com.holddie.tmp.string;
 
-
-/**
- * 正则表达式
- */
+/** 正则表达式 */
 public class Pattern {
-    /**
-     * 标识
-     */
+    /** 标识 */
     private boolean match;
-    /**
-     * 正则表达式
-     */
+    /** 正则表达式 */
     private char[] patChars;
-    /**
-     * 长度
-     */
+    /** 长度 */
     private int plen;
 
     /**
@@ -47,7 +38,7 @@ public class Pattern {
      * 递归匹配
      *
      * @param ti 字符索引
-     * @param pj  正则表达式索引
+     * @param pj 正则表达式索引
      * @param txtChars 字符
      * @param tlen 字符长度
      */
@@ -58,11 +49,11 @@ public class Pattern {
             return;
         }
 
-        if (patChars[pj] == '*') {//* 任意字符
+        if (patChars[pj] == '*') { // * 任意字符
             for (int i = 0; i < tlen - ti; i++) {
                 recursiveMatch(ti + i, pj + 1, txtChars, tlen);
             }
-        } else if (patChars[pj] == '?') {//? 0 or 1
+        } else if (patChars[pj] == '?') { // ? 0 or 1
             recursiveMatch(ti, pj + 1, txtChars, tlen);
             recursiveMatch(ti + 1, pj + 1, txtChars, tlen);
         } else if (ti < tlen && patChars[pj] == txtChars[ti]) {
@@ -75,9 +66,9 @@ public class Pattern {
         Pattern pattern = new Pattern(patten);
         String txtT = "666@cc.com";
         boolean resT = pattern.isMatch(txtT);
-        System.out.println(txtT + "的匹配结果："  + resT);
+        System.out.println(txtT + "的匹配结果：" + resT);
         String txtF = "666@c.con";
         boolean resF = pattern.isMatch(txtF);
-        System.out.println(txtF + "的匹配结果："  + resF);
+        System.out.println(txtF + "的匹配结果：" + resF);
     }
 }

@@ -1,8 +1,7 @@
 package com.holddie.tmp.linkedList;
 
 /**
- * 1. 单链表类
- * 2.该链表的存储类型为int
+ * 1. 单链表类 2.该链表的存储类型为int
  *
  * @author mic
  */

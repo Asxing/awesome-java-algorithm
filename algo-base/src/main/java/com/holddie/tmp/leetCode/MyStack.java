@@ -4,12 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Your MyStack object will be instantiated and called as such:
- * MyStack obj = new MyStack();
- * obj.push(x);
- * int param_2 = obj.pop();
- * int param_3 = obj.top();
- * boolean param_4 = obj.empty();
+ * Your MyStack object will be instantiated and called as such: MyStack obj = new MyStack();
+ * obj.push(x); int param_2 = obj.pop(); int param_3 = obj.top(); boolean param_4 = obj.empty();
  */
 public class MyStack {
 
@@ -31,14 +27,14 @@ public class MyStack {
 
     /** Removes the element on top of the stack and returns that element. */
     private int pop() {
-        Integer num =  queue.poll();
-        return  null == num ? -1 : num;
+        Integer num = queue.poll();
+        return null == num ? -1 : num;
     }
 
     /** Get the top element. */
     private int top() {
-        Integer num =  queue.peek();
-        return  null == num ? -1 : num;
+        Integer num = queue.peek();
+        return null == num ? -1 : num;
     }
 
     /** Returns whether the stack is empty. */

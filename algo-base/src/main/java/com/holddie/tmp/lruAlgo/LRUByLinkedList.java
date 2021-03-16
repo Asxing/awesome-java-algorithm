@@ -3,18 +3,12 @@ package com.holddie.tmp.lruAlgo;
 import juejin.lc.linkedList.Node;
 
 public class LRUByLinkedList {
-    /**
-     * 头结点
-     */
+    /** 头结点 */
     private Node head;
 
-    /**
-     * 链表长度
-     */
+    /** 链表长度 */
     private int size;
-    /**
-     * 链表容量
-     */
+    /** 链表容量 */
     private int count;
 
     /**
@@ -38,16 +32,14 @@ public class LRUByLinkedList {
         if (null != preNode) {
             delete(preNode);
         } else {
-            if (count >= size) {//链表满
+            if (count >= size) { // 链表满
                 deleteToTail();
             }
         }
         insertToHead(data);
     }
 
-    /**
-     * 删除链表尾部元素
-     */
+    /** 删除链表尾部元素 */
     private void deleteToTail() {
         Node node = head;
         Node curNode = null;

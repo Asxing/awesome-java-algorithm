@@ -1,24 +1,15 @@
 package com.holddie.tmp.linkedList;
 
-/**
- * 双向链表类
- */
+/** 双向链表类 */
 public class DulNode {
-    /**
-     * 数据
-     */
+    /** 数据 */
     public int data;
-    /**
-     * 前驱节点
-     */
+    /** 前驱节点 */
     public DulNode prev;
-    /**
-     * 后继节点
-     */
+    /** 后继节点 */
     public DulNode next;
 
-    private DulNode() {
-    }
+    private DulNode() {}
 
     /**
      * 有参构造方法

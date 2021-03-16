@@ -5,10 +5,13 @@ public class SearchRange {
     public int[] searchRange(int[] nums, int target) {
         int leftIdx = binarySearch(nums, target, true);
         int rightIdx = binarySearch(nums, target, false) - 1;
-        if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] == target && nums[rightIdx] == target) {
-            return new int[]{leftIdx, rightIdx};
+        if (leftIdx <= rightIdx
+                && rightIdx < nums.length
+                && nums[leftIdx] == target
+                && nums[rightIdx] == target) {
+            return new int[] {leftIdx, rightIdx};
         }
-        return new int[]{-1, -1};
+        return new int[] {-1, -1};
     }
 
     public int binarySearch(int[] nums, int target, boolean lower) {

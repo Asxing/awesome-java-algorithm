@@ -2,28 +2,18 @@ package com.holddie.tmp.hashTable;
 
 import java.util.LinkedList;
 
-/**
- * 拉链法
- */
+/** 拉链法 */
 public class SeparateChainHT<Key, Value> {
-    /**
-     * 初始化大小
-     */
+    /** 初始化大小 */
     private static final int INIT_CAPACITY = 997;
 
-    /**
-     * 散列表大小
-     */
+    /** 散列表大小 */
     private int size;
 
-    /**
-     * 存放链表对象的数组
-     */
+    /** 存放链表对象的数组 */
     private SequentialSearchST<Key, Value>[] sequentialSearchSTS;
 
-    /**
-     * 无参构造方法
-     */
+    /** 无参构造方法 */
     private SeparateChainHT() {
         this(INIT_CAPACITY);
     }
@@ -35,7 +25,7 @@ public class SeparateChainHT<Key, Value> {
      */
     @SuppressWarnings("unchecked")
     private SeparateChainHT(int capacity) {
-        //创建M条链表
+        // 创建M条链表
         this.size = capacity;
         sequentialSearchSTS = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[capacity];
         for (int i = 0; i < size; i++) {
@@ -56,7 +46,7 @@ public class SeparateChainHT<Key, Value> {
     /**
      * put 方法
      *
-     * @param key   键
+     * @param key 键
      * @param value 值
      */
     private void put(Key key, Value value) {
@@ -81,8 +71,7 @@ public class SeparateChainHT<Key, Value> {
     private Iterable<Key> keys() {
         LinkedList<Key> queue = new LinkedList<>();
         for (int i = 0; i < size; i++) {
-            for (Key key : sequentialSearchSTS[i].keys())
-                queue.add(key);
+            for (Key key : sequentialSearchSTS[i].keys()) queue.add(key);
         }
         return queue;
     }

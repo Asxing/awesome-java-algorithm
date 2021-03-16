@@ -21,6 +21,5 @@ public class DiameterOfBinaryTree {
         return Math.max(leftSize, rightSize);
     }
 
-    public static void main(String[] args) {
-    }
+    public static void main(String[] args) {}
 }

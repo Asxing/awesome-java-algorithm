@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 public class DecodeString {
-    
+
     int ptr;
 
     public String decodeString(String s) {
@@ -60,5 +60,4 @@ public class DecodeString {
         }
         return ret.toString();
     }
-
 }

@@ -1,23 +1,16 @@
 package com.holddie.tmp.arithmetic;
 
 /**
- * 1.支持动态扩容
- * 2.支持动态增删改查
+ * 1.支持动态扩容 2.支持动态增删改查
  *
  * @author mic
  */
 public class Array {
-    /**
-     * 数组
-     */
+    /** 数组 */
     private int array[];
-    /**
-     * 数组长度
-     */
+    /** 数组长度 */
     private int size;
-    /**
-     * 数组中数据数量
-     */
+    /** 数组中数据数量 */
     private int count;
 
     /**
@@ -38,8 +31,7 @@ public class Array {
      * @return
      */
     public int find(int index) {
-        if (index < 0 || index > count)
-            return -1;
+        if (index < 0 || index > count) return -1;
         return array[index];
     }
 
@@ -50,8 +42,7 @@ public class Array {
      * @return
      */
     public boolean delete(int index) {
-        if (index < 0 || index > count)
-            return false;
+        if (index < 0 || index > count) return false;
         for (int i = index + 1; i < count; i++) {
             array[i - 1] = array[i];
         }
@@ -72,8 +63,7 @@ public class Array {
      * @return
      */
     public boolean insert(int index, int value) {
-        if (index < 0 || index > count)
-            return false;
+        if (index < 0 || index > count) return false;
         if (count == size) {
             arrayExpansion(size * 2);
             System.out.println("动态扩容....");
@@ -117,9 +107,7 @@ public class Array {
         return true;
     }
 
-    /**
-     * 打印data数组
-     */
+    /** 打印data数组 */
     public void printAll() {
         for (int i = 0; i < count; i++) {
             System.out.print(array[i] + " ");
@@ -133,10 +121,10 @@ public class Array {
             array.insert(i, i);
         }
         array.printAll();
-        //扩容
+        // 扩容
         array.insert(10, 10);
         array.printAll();
-        //缩容
+        // 缩容
         for (int i = array.size; i > array.size / 4; --i) {
             array.delete(i);
         }

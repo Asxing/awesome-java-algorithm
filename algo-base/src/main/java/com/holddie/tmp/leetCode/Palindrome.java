@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-/**
- * 判断单链表回文的三种方法
- */
+/** 判断单链表回文的三种方法 */
 public class Palindrome {
 
     /**
@@ -116,7 +114,7 @@ public class Palindrome {
         singlyLinkedList.insertTail(1);
         singlyLinkedList.insertTail(2);
         singlyLinkedList.insertTail(3);
-//        singlyLinkedList.insertTail(4);
+        //        singlyLinkedList.insertTail(4);
         singlyLinkedList.insertTail(2);
         singlyLinkedList.insertTail(1);
         singlyLinkedList.printAll();

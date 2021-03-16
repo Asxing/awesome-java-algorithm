@@ -1,21 +1,12 @@
 package com.holddie.tmp.string;
 
-/**
- * BM算法
- * 启发式地处理不匹配的字符
- */
+/** BM算法 启发式地处理不匹配的字符 */
 public class BoyerMoore {
-    /**
-     * 记录
-     */
+    /** 记录 */
     private int[] records;
-    /**
-     * 模式串
-     */
+    /** 模式串 */
     private String pattern;
-    /**
-     * 模式串长度
-     */
+    /** 模式串长度 */
     private int pLen;
 
     private BoyerMoore(String pattern) {
@@ -23,11 +14,11 @@ public class BoyerMoore {
         pLen = pattern.length();
         int aLen = 256;
         records = new int[aLen];
-        //初始化记录数组，默认-1
+        // 初始化记录数组，默认-1
         for (int i = 0; i < aLen; i++) {
             records[i] = -1;
         }
-        //模式串中的字符在其中出现的最右位置
+        // 模式串中的字符在其中出现的最右位置
         for (int j = 0; j < pLen; j++) {
             records[pattern.charAt(j)] = j;
         }

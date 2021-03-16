@@ -1,12 +1,8 @@
 package com.holddie.tmp.tree;
 
-/**
- * 二叉搜索树
- */
+/** 二叉搜索树 */
 public class BinarySearchTree {
-    /**
-     * 根节点
-     */
+    /** 根节点 */
     private Node tree;
 
     /**
@@ -44,7 +40,7 @@ public class BinarySearchTree {
      */
     private void delete(int data) {
         Node node = tree;
-        //node的父节点
+        // node的父节点
         Node pNode = null;
         while (null != node && node.data != data) {
             pNode = node;
@@ -57,13 +53,13 @@ public class BinarySearchTree {
         if (null == node) return;
         if (null != node.left && null != node.right) {
             Node p = node.right;
-            //p的父节点
+            // p的父节点
             Node pp = node;
             while (null != p.left) {
                 pp = p.left;
                 p = p.left;
             }
-            //删除操作
+            // 删除操作
             node.data = p.data;
             node = p;
             pNode = pp;
@@ -180,19 +176,19 @@ public class BinarySearchTree {
         //     8           36
         //  6    11     25    77
         //    7     18      33
-//        System.out.println("前序遍历:");
-//        traversalTree.preOrderTraversal(binarySearchTree.tree);
-//        System.out.println();
-//        System.out.println("中序遍历:");
-//        traversalTree.inOrderTraversal(binarySearchTree.tree);
-//        System.out.println();
-//        System.out.println("后序遍历:");
-//        traversalTree.postOrderTraversal(binarySearchTree.tree);
-//        System.out.println();
-//        System.out.println("层级遍历:");
-//        traversalTree.levelTraversal(binarySearchTree.tree);
-//        int delete = 8;
-//        binarySearchTree.delete(delete);
+        //        System.out.println("前序遍历:");
+        //        traversalTree.preOrderTraversal(binarySearchTree.tree);
+        //        System.out.println();
+        //        System.out.println("中序遍历:");
+        //        traversalTree.inOrderTraversal(binarySearchTree.tree);
+        //        System.out.println();
+        //        System.out.println("后序遍历:");
+        //        traversalTree.postOrderTraversal(binarySearchTree.tree);
+        //        System.out.println();
+        //        System.out.println("层级遍历:");
+        //        traversalTree.levelTraversal(binarySearchTree.tree);
+        //        int delete = 8;
+        //        binarySearchTree.delete(delete);
         System.out.println();
         Node maxNode = binarySearchTree.findMaxNode();
         if (null != maxNode) System.out.println("最大的节点的值为:" + maxNode.data);

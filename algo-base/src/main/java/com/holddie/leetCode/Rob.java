@@ -4,15 +4,12 @@ import java.util.Arrays;
 
 public class Rob {
 
-    /**
-     * memo[i] 表示考虑抢劫 nums[i...n] 所能获得的最大收益
-     */
+    /** memo[i] 表示考虑抢劫 nums[i...n] 所能获得的最大收益 */
     private int[] memo;
 
     /**
-     * 方式一：记忆化搜索
-     * ① 状态：考虑抢劫 nums[index...num.length） 这个范围内的所有房子
-     * ② 状态转移：tryRob(n) = Max{rob(0) + tryRob(2), rob(1) + tryRob(3)... rob(n-3) + tryRob(n-1), rob(n-2), rob(n-1)}
+     * 方式一：记忆化搜索 ① 状态：考虑抢劫 nums[index...num.length） 这个范围内的所有房子 ② 状态转移：tryRob(n) = Max{rob(0) +
+     * tryRob(2), rob(1) + tryRob(3)... rob(n-3) + tryRob(n-1), rob(n-2), rob(n-1)}
      */
     public int rob1(int[] nums) {
         memo = new int[nums.length];
@@ -37,9 +34,7 @@ public class Rob {
         return res;
     }
 
-    /**
-     * 方式二：动态规划
-     */
+    /** 方式二：动态规划 */
     public int rob2(int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -51,22 +46,22 @@ public class Rob {
         memo[n - 1] = nums[n - 1];
         for (int i = n - 2; i >= 0; i--) {
             // memo[i] 的取值在考虑抢劫 i 号房子和不考虑抢劫之间取最大值
-            memo[i] = Math.max(nums[i] + (i + 2 >= n ? 0 : memo[i + 2]), nums[i + 1] + (i + 3 >= n ? 0 : memo[i + 3]));
+            memo[i] =
+                    Math.max(
+                            nums[i] + (i + 2 >= n ? 0 : memo[i + 2]),
+                            nums[i + 1] + (i + 3 >= n ? 0 : memo[i + 3]));
         }
         return memo[0];
     }
 
-    /**
-     * 动态规划简化版
-     */
+    /** 动态规划简化版 */
     public int rob(int[] nums) {
         int n = nums.length;
         if (n <= 1) return n == 0 ? 0 : nums[0];
         int[] memo = new int[n];
         memo[0] = nums[0];
         memo[1] = Math.max(nums[0], nums[1]);
-        for (int i = 2; i < n; i++)
-            memo[i] = Math.max(memo[i - 1], nums[i] + memo[i - 2]);
+        for (int i = 2; i < n; i++) memo[i] = Math.max(memo[i - 1], nums[i] + memo[i - 2]);
         return memo[n - 1];
     }
 }

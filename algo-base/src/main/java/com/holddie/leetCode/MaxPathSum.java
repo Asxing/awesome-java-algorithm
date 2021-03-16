@@ -7,8 +7,7 @@ public class MaxPathSum {
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {
-        }
+        TreeNode() {}
 
         TreeNode(int val) {
             this.val = val;
@@ -21,15 +20,13 @@ public class MaxPathSum {
         }
     }
 
-
     private int ret = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
         /**
-         对于任意一个节点, 如果最大和路径包含该节点, 那么只可能是两种情况:
-         1. 其左右子树中所构成的和路径值较大的那个加上该节点的值后向父节点回溯构成最大路径
-         2. 左右子树都在最大路径中, 加上该节点的值构成了最终的最大路径
-         **/
+         * 对于任意一个节点, 如果最大和路径包含该节点, 那么只可能是两种情况: 1. 其左右子树中所构成的和路径值较大的那个加上该节点的值后向父节点回溯构成最大路径 2.
+         * 左右子树都在最大路径中, 加上该节点的值构成了最终的最大路径
+         */
         getMax(root);
         return ret;
     }

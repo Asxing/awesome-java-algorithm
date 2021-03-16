@@ -2,34 +2,22 @@ package com.holddie.tmp.linkedList;
 
 import java.util.Random;
 
-/**
- * 跳表
- */
+/** 跳表 */
 public class SkipList {
 
-    /**
-     * 最大索引层级
-     */
+    /** 最大索引层级 */
     private static final int MAX_LEVEL = 16;
 
-    /**
-     * 水平数
-     */
+    /** 水平数 */
     private int levelCount;
 
-    /**
-     * 头链表
-     */
+    /** 头链表 */
     private SNode head;
 
-    /**
-     * 随机数方法
-     */
+    /** 随机数方法 */
     private Random random;
 
-    /**
-     * 初始化
-     */
+    /** 初始化 */
     private SkipList() {
         levelCount = 1;
         head = new SNode();
@@ -61,8 +49,7 @@ public class SkipList {
             sNode.forwards[i] = forwards[i].forwards[i];
             forwards[i].forwards[i] = sNode;
         }
-        if (levelCount < level)
-            levelCount = level;
+        if (levelCount < level) levelCount = level;
     }
 
     /**
@@ -118,7 +105,7 @@ public class SkipList {
                 ++level;
             }
         }
-//        System.out.println("randomLevel-level = " + level);
+        //        System.out.println("randomLevel-level = " + level);
         return level;
     }
 
@@ -153,7 +140,6 @@ public class SkipList {
         skipList.printAll();
         int find = 8;
         SNode sNode = skipList.findByValue(find);
-        if (null != sNode)
-            System.out.println(sNode.toString());
+        if (null != sNode) System.out.println(sNode.toString());
     }
 }

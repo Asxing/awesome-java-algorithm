@@ -52,8 +52,7 @@ public class RemoveNthFromEnd {
             temp = temp.next;
         }
         int size = m.size();
-        if (size == 1)
-            return null;
+        if (size == 1) return null;
         if (n == 1) {
             m.get(size - 1).next = null;
         } else if (n == size) {

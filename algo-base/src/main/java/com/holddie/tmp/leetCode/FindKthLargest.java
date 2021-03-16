@@ -1,16 +1,14 @@
 package com.holddie.tmp.leetCode;
 
-/**
- * 查找第K大元素
- */
+/** 查找第K大元素 */
 public class FindKthLargest {
     /**
      * 基于快排查找
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param tail   数组尾
-     * @param k      key
+     * @param head 数组头
+     * @param tail 数组尾
+     * @param k key
      * @return value
      */
     private int findKByQuick(int[] arrays, int head, int tail, int k) {
@@ -20,7 +18,7 @@ public class FindKthLargest {
         } else if (pivot < k - 1) {
             return findKByQuick(arrays, pivot + 1, tail, k);
         }
-//        pivot == k - 1
+        //        pivot == k - 1
         System.out.println("k = " + (pivot + 1));
         printAll(arrays);
         return arrays[pivot];
@@ -30,8 +28,8 @@ public class FindKthLargest {
      * 分区函数
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param tail   数组尾
+     * @param head 数组头
+     * @param tail 数组尾
      * @return 分区点
      */
     private int partition(int[] arrays, int head, int tail) {

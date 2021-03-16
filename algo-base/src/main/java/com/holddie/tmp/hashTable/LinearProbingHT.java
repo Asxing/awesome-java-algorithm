@@ -1,33 +1,20 @@
 package com.holddie.tmp.hashTable;
 
-
 import java.util.LinkedList;
 
-/**
- * 线性探测法
- */
+/** 线性探测法 */
 public class LinearProbingHT<Key, Value> {
 
-    /**
-     * 线性探测表的大小
-     */
+    /** 线性探测表的大小 */
     private int size = 16;
-    /**
-     * 链表中键值对总数
-     */
+    /** 链表中键值对总数 */
     private int count;
-    /**
-     * 键
-     */
+    /** 键 */
     private Key[] keys;
-    /**
-     * 值
-     */
+    /** 值 */
     private Value[] values;
 
-    /**
-     * 构造方法
-     */
+    /** 构造方法 */
     @SuppressWarnings("unchecked")
     private LinearProbingHT() {
         keys = (Key[]) new Object[size];
@@ -44,7 +31,6 @@ public class LinearProbingHT<Key, Value> {
         keys = (Key[]) new Object[capacity];
         values = (Value[]) new Object[capacity];
     }
-
 
     /**
      * hash
@@ -76,11 +62,11 @@ public class LinearProbingHT<Key, Value> {
     /**
      * put方法
      *
-     * @param key   键
+     * @param key 键
      * @param value 值
      */
     private void put(Key key, Value value) {
-        if (count >= size / 2) resize(size * 2);//扩容
+        if (count >= size / 2) resize(size * 2); // 扩容
         int i;
         for (i = hash(key); null != keys[i]; i = (i + 1) % size) {
             if (keys[i].equals(key)) {
@@ -133,19 +119,17 @@ public class LinearProbingHT<Key, Value> {
             i = (i + 1) % size;
         }
         --count;
-        if (count > 0 && count == size / 8) resize(size / 2);//缩容
+        if (count > 0 && count == size / 8) resize(size / 2); // 缩容
     }
 
     private Iterable<Key> keys() {
         LinkedList<Key> linkedList = new LinkedList<>();
-        for (int i = 0; i < size; i++)
-            if (keys[i] != null) linkedList.add(keys[i]);
+        for (int i = 0; i < size; i++) if (keys[i] != null) linkedList.add(keys[i]);
         return linkedList;
     }
 
     private boolean contains(Key key) {
-        if (key == null)
-            throw new IllegalArgumentException("key is null");
+        if (key == null) throw new IllegalArgumentException("key is null");
         return get(key) != null;
     }
 
@@ -154,15 +138,14 @@ public class LinearProbingHT<Key, Value> {
         for (int i = 0; i < 10; i++) {
             linearProbingHT.put(i, "value = " + i);
         }
-//        int key = 6;
-//        String value = linearProbingHT.get(key);
-//        System.out.println("{ key = " + key + "," + value + "}");
-//        int delKey = 8;
-//        linearProbingHT.delete(delKey);
+        //        int key = 6;
+        //        String value = linearProbingHT.get(key);
+        //        System.out.println("{ key = " + key + "," + value + "}");
+        //        int delKey = 8;
+        //        linearProbingHT.delete(delKey);
         for (Integer curKey : linearProbingHT.keys()) {
             String curValue = linearProbingHT.get(curKey);
             System.out.println("{ key = " + curKey + "," + curValue + "}");
         }
     }
 }
-

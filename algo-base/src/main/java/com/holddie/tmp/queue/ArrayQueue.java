@@ -6,21 +6,13 @@ package com.holddie.tmp.queue;
  * @author mic
  */
 public class ArrayQueue {
-    /**
-     * 数组
-     */
+    /** 数组 */
     private int[] arrays;
-    /**
-     * 数组大小
-     */
+    /** 数组大小 */
     private int size;
-    /**
-     * 队列队头下标
-     */
+    /** 队列队头下标 */
     private int head;
-    /**
-     * 队列队尾下标
-     */
+    /** 队列队尾下标 */
     private int tail;
 
     /**
@@ -44,7 +36,7 @@ public class ArrayQueue {
     public boolean enqueue(int num) {
         if (tail == size) {
             if (head == 0) return false;
-            //数据搬移
+            // 数据搬移
             for (int i = head; i < tail; i++) {
                 arrays[i - head] = arrays[i];
             }
@@ -61,8 +53,7 @@ public class ArrayQueue {
      * @return
      */
     public int dequeue() {
-        if (head == tail)
-            return -1;// 这里-1表示队空
+        if (head == tail) return -1; // 这里-1表示队空
         int res = arrays[head++];
         return res;
     }
@@ -84,9 +75,8 @@ public class ArrayQueue {
         }
         arrayQueue.printAll();
         // 出队
-//		int num = arrayQueue.dequeue();
-//		System.out.println("出队：" + num);
-//		arrayQueue.printAll();
+        //		int num = arrayQueue.dequeue();
+        //		System.out.println("出队：" + num);
+        //		arrayQueue.printAll();
     }
-
 }

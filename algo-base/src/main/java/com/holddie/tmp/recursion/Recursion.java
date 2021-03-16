@@ -3,21 +3,16 @@ package com.holddie.tmp.recursion;
 import java.util.HashMap;
 
 /**
- * 1.三种方式实现递归
- * 2.解决斐波那契数列问题
+ * 1.三种方式实现递归 2.解决斐波那契数列问题
  *
  * @author mic
  */
 public class Recursion {
 
-    /**
-     * 缓存计算结果，防止重复
-     */
+    /** 缓存计算结果，防止重复 */
     private HashMap<Integer, Integer> resCache;
 
-    /**
-     * 构造方法
-     */
+    /** 构造方法 */
     public Recursion() {
         resCache = new HashMap<Integer, Integer>();
     }
@@ -29,8 +24,7 @@ public class Recursion {
      */
     public int recursion(int num) {
         // 一定要先给出递归跳出条件
-        if (num < 3)
-            return 1;
+        if (num < 3) return 1;
         // resCache是一个HashMap，key是num，value是res
         if (resCache.containsKey(num)) {
             return resCache.get(num);
@@ -44,15 +38,13 @@ public class Recursion {
      * 尾递归
      *
      * @param num
-     * @param first  第一个数
+     * @param first 第一个数
      * @param second 第二个数
      * @return
      */
     public int tailRecursion(int num, int first, int second) {
-        if (num < 3)
-            return 1;
-        if (num == 3)
-            return first + second;
+        if (num < 3) return 1;
+        if (num == 3) return first + second;
         return tailRecursion(num - 1, second, first + second);
     }
 
@@ -104,5 +96,4 @@ public class Recursion {
         int arrayRes = recursion.arrayRecursion(num);
         System.out.println("基于数组的实现：" + arrayRes);
     }
-
 }

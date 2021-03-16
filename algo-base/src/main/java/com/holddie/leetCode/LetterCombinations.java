@@ -44,7 +44,8 @@ public class LetterCombinations {
         return list;
     }
 
-    private static List<String> getStringWithFor(String[] s, int i, List<String> list, String stemp) {
+    private static List<String> getStringWithFor(
+            String[] s, int i, List<String> list, String stemp) {
 
         if (i < s.length - 1) {
             for (int j = 0; j < s[i].length(); j++) {

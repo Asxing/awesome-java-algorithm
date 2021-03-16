@@ -2,21 +2,13 @@ package com.holddie.tmp.queue;
 
 public class CircleQueue {
 
-    /**
-     * 数组
-     */
+    /** 数组 */
     private int[] arrays;
-    /**
-     * 数组大小
-     */
+    /** 数组大小 */
     private int size;
-    /**
-     * 队列队头下标
-     */
+    /** 队列队头下标 */
     private int head;
-    /**
-     * 队列队尾下标
-     */
+    /** 队列队尾下标 */
     private int tail;
 
     /**
@@ -38,8 +30,7 @@ public class CircleQueue {
      * @return
      */
     public boolean enqueue(int num) {
-        if ((tail + 1) % size == head)
-            return false;
+        if ((tail + 1) % size == head) return false;
         arrays[tail] = num;
         tail = (tail + 1) % size;
         return true;
@@ -51,16 +42,14 @@ public class CircleQueue {
      * @return
      */
     public int dequeue() {
-        if (head == tail)
-            return -1;// -1表示队空
+        if (head == tail) return -1; // -1表示队空
         int ret = arrays[head];
         head = (head + 1) % size;
         return ret;
     }
 
     public void printAll() {
-        if (size == 0)
-            System.out.println("队空");
+        if (size == 0) System.out.println("队空");
         for (int i = head; i % size != tail; ++i) {
             System.out.println(arrays[i] + " ");
         }
@@ -75,5 +64,4 @@ public class CircleQueue {
         }
         circleQueue.printAll();
     }
-
 }

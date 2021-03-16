@@ -1,22 +1,14 @@
 package com.holddie.tmp.heap;
 
-/**
- * 求一组动态数据集合的中位数
- */
+/** 求一组动态数据集合的中位数 */
 public class Median {
 
-    /**
-     * 大顶堆
-     */
+    /** 大顶堆 */
     private MaxHeap maxHeap;
-    /**
-     * 小顶堆
-     */
+    /** 小顶堆 */
     private MinHeap minHeap;
 
-    /**
-     * 数据数量
-     */
+    /** 数据数量 */
     private int count;
 
     /**

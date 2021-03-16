@@ -3,33 +3,21 @@ package com.holddie.tmp.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Trie树
- */
+/** Trie树 */
 public class TrieTree {
-    /**
-     * 根节点
-     */
+    /** 根节点 */
     private TrieNode root;
 
-    /**
-     * 预制单词数量
-     */
+    /** 预制单词数量 */
     private int count;
 
-    /**
-     * 提示词列表
-     */
+    /** 提示词列表 */
     private List<String> list;
 
-    /**
-     * 输入值
-     */
+    /** 输入值 */
     private String pattern;
 
-    /**
-     * 存储一个无意义的字符
-     */
+    /** 存储一个无意义的字符 */
     private TrieTree() {
         root = new TrieNode('/');
         count = 0;
@@ -44,7 +32,7 @@ public class TrieTree {
     private void insert(char[] txt) {
         TrieNode p = root;
         for (char c : txt) {
-            //当前字符的ASCII码 - 'a'的 ASCII码
+            // 当前字符的ASCII码 - 'a'的 ASCII码
             int index = c - 'a';
             if (null == p.children[index]) {
                 TrieNode node = new TrieNode(c);
@@ -67,26 +55,22 @@ public class TrieTree {
         TrieNode p = root;
         for (char patChar : patChars) {
             int index = patChar - 'a';
-            if (null == p.children[index])
-                return false;
+            if (null == p.children[index]) return false;
             p = p.children[index];
         }
         return p.isEndingChar;
     }
 
-    /**
-     * 模糊匹配提示
-     */
+    /** 模糊匹配提示 */
     private void match() {
         char[] patChars = pattern.toCharArray();
         TrieNode p = root;
         for (char patChar : patChars) {
             int index = patChar - 'a';
-            if (null == p.children[index])
-                return;
+            if (null == p.children[index]) return;
             p = p.children[index];
         }
-        //开始遍历 p,将所有匹配的字符加入strs
+        // 开始遍历 p,将所有匹配的字符加入strs
         traversal(p, "");
     }
 
@@ -99,9 +83,9 @@ public class TrieTree {
         if (null != trieNode) {
             str += trieNode.data;
             if (trieNode.isEndingChar) {
-                String curStr = pattern.length() == 1 ? str : pattern + str.substring(pattern.length() - 1);
-                if (!list.contains(curStr))
-                    list.add(curStr);
+                String curStr =
+                        pattern.length() == 1 ? str : pattern + str.substring(pattern.length() - 1);
+                if (!list.contains(curStr)) list.add(curStr);
                 return;
             }
             for (int i = 0; i < trieNode.children.length; i++) {
@@ -110,18 +94,16 @@ public class TrieTree {
         }
     }
 
-    /**
-     * 初始化字典树
-     */
+    /** 初始化字典树 */
     private void initTries() {
-//        how，hi，her，hello，so，see
-//                   /
-//              h         s
-//           e  i  o    o   e
-//         l         w        e
-//      l
-//   o
-//        ps：缩点优化
+        //        how，hi，her，hello，so，see
+        //                   /
+        //              h         s
+        //           e  i  o    o   e
+        //         l         w        e
+        //      l
+        //   o
+        //        ps：缩点优化
         char[] how = "how".toCharArray();
         insert(how);
         char[] hi = "hi".toCharArray();
@@ -162,17 +144,11 @@ public class TrieTree {
     }
 
     private class TrieNode {
-        /**
-         * 字符
-         */
+        /** 字符 */
         public char data;
-        /**
-         * 子节点
-         */
+        /** 子节点 */
         TrieNode[] children;
-        /**
-         * 标识
-         */
+        /** 标识 */
         boolean isEndingChar;
 
         TrieNode(char data) {

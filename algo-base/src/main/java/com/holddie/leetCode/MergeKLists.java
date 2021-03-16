@@ -5,8 +5,7 @@ public class MergeKLists {
         int val;
         ListNode next;
 
-        ListNode() {
-        }
+        ListNode() {}
 
         ListNode(int val) {
             this.val = val;
@@ -19,10 +18,8 @@ public class MergeKLists {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0)
-            return null;
-        if (lists.length == 1)
-            return lists[0];
+        if (lists.length == 0) return null;
+        if (lists.length == 1) return lists[0];
         if (lists.length == 2) {
             return mergeTwoLists(lists[0], lists[1]);
         }
@@ -39,7 +36,6 @@ public class MergeKLists {
         }
 
         return mergeTwoLists(mergeKLists(l1), mergeKLists(l2));
-
     }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

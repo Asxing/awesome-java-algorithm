@@ -11,18 +11,8 @@ import java.util.List;
  */
 public class GenerateSolution {
     /**
-     * 给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。
-     * 在杨辉三角中，每个数是它左上方和右上方的数的和。
-     * 示例:
-     * 输入: 5
-     * 输出:
-     * [
-     * [1],
-     * [1,1],
-     * [1,2,1],
-     * [1,3,3,1],
-     * [1,4,6,4,1]
-     * ]
+     * 给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 5 输出: [ [1], [1,1],
+     * [1,2,1], [1,3,3,1], [1,4,6,4,1] ]
      *
      * @param numRows 整数
      * @return 返回结果
@@ -32,7 +22,7 @@ public class GenerateSolution {
         if (numRows == 0) {
             return triangle;
         }
-        //numRows = 1 特殊处理
+        // numRows = 1 特殊处理
         triangle.add(new ArrayList<>());
         triangle.get(0).add(1);
         for (int rowNum = 1; rowNum < numRows; rowNum++) {
@@ -49,11 +39,7 @@ public class GenerateSolution {
     }
 
     /**
-     * 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
-     * 在杨辉三角中，每个数是它左上方和右上方的数的和。
-     * 示例:
-     * 输入: 3
-     * 输出: [1,3,3,1]
+     * 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 3 输出: [1,3,3,1]
      *
      * @param rowIndex
      * @return
@@ -71,7 +57,5 @@ public class GenerateSolution {
         return res;
     }
 
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {}
 }

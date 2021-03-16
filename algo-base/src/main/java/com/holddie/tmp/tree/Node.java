@@ -1,21 +1,14 @@
 package com.holddie.tmp.tree;
 
 public class Node {
-    /**
-     * data
-     */
+    /** data */
     public int data;
-    /**
-     * 左节点
-     */
+    /** 左节点 */
     public Node left;
-    /**
-     * 右节点
-     */
+    /** 右节点 */
     public Node right;
 
     public Node(int data) {
         this.data = data;
     }
-
 }

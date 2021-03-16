@@ -1,16 +1,10 @@
 package com.holddie.tmp.tree;
 
-
 import java.util.LinkedList;
 
-/**
- * 二叉树的遍历
- */
+/** 二叉树的遍历 */
 public class TraversalTree {
-    /**
-     * 前序遍历
-     * 根左右
-     */
+    /** 前序遍历 根左右 */
     public void preOrderTraversal(Node tree) {
         if (null == tree) return;
         System.out.print(tree.data + " ");
@@ -18,10 +12,7 @@ public class TraversalTree {
         preOrderTraversal(tree.right);
     }
 
-    /**
-     * 中序遍历
-     * 左根右
-     */
+    /** 中序遍历 左根右 */
     public void inOrderTraversal(Node tree) {
         if (null == tree) return;
         inOrderTraversal(tree.left);
@@ -29,10 +20,7 @@ public class TraversalTree {
         inOrderTraversal(tree.right);
     }
 
-    /**
-     * 后序遍历
-     * 左右根
-     */
+    /** 后序遍历 左右根 */
     public void postOrderTraversal(Node tree) {
         if (null == tree) return;
         postOrderTraversal(tree.left);

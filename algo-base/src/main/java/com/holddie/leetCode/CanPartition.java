@@ -1,18 +1,13 @@
 package com.holddie.leetCode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CanPartition {
 
-    /**
-     * 链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/
-     */
+    /** 链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/ */
     public static boolean canPartition(int[] nums) {
         int n = nums.length;
         if (n < 2) {
@@ -57,7 +52,7 @@ public class CanPartition {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 5, 11, 5};
+        int[] nums = new int[] {1, 5, 11, 5};
         canPartition(nums);
     }
 }

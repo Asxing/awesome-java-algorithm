@@ -2,16 +2,14 @@ package com.holddie.tmp.leetCode;
 
 import java.util.PriorityQueue;
 
-/**
- * 求一组动态数据集合的最大 Top K
- */
+/** 求一组动态数据集合的最大 Top K */
 public class GetTopKArrays {
 
     /**
      * topK
      *
      * @param arrays 数组大小
-     * @param k      k
+     * @param k k
      * @return 返回值
      */
     private int[] topK(int[] arrays, int k) {

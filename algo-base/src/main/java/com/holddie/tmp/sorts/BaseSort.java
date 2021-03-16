@@ -1,8 +1,6 @@
 package com.holddie.tmp.sorts;
 
-/**
- * 五个必会的排序
- */
+/** 五个必会的排序 */
 public class BaseSort {
     /**
      * 冒泡排序
@@ -11,9 +9,9 @@ public class BaseSort {
      * @return 排序结果
      */
     private int[] bubbleSort(int[] arrays) {
-        //第一个循环遍历，第二个循环比较
+        // 第一个循环遍历，第二个循环比较
         for (int i = 0; i < arrays.length; i++) {
-            //退出标记
+            // 退出标记
             boolean flag = false;
             for (int j = i + 1; j < arrays.length; j++) {
                 if (arrays[i] > arrays[j]) {
@@ -31,8 +29,7 @@ public class BaseSort {
     }
 
     /**
-     * 插入排序
-     * 扑克牌思想
+     * 插入排序 扑克牌思想
      *
      * @param arrays 排序数组
      * @return 排序结果
@@ -79,12 +76,11 @@ public class BaseSort {
     }
 
     /**
-     * 快速排序
-     * 分而知之
+     * 快速排序 分而知之
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param tail   数组尾
+     * @param head 数组头
+     * @param tail 数组尾
      */
     private void quickSort(int[] arrays, int head, int tail) {
         if (head >= tail) {
@@ -99,8 +95,8 @@ public class BaseSort {
      * 分区函数
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param tail   数组尾
+     * @param head 数组头
+     * @param tail 数组尾
      * @return 分区点
      */
     private int partition(int[] arrays, int head, int tail) {
@@ -108,7 +104,7 @@ public class BaseSort {
         int i = head;
         for (int j = head; j < tail; ++j) {
             if (arrays[j] < pivot) {
-                if(i == j) {
+                if (i == j) {
                     ++i;
                 } else {
                     int tmp = arrays[i];
@@ -120,7 +116,7 @@ public class BaseSort {
         int tmp = arrays[i];
         arrays[i] = arrays[tail];
         arrays[tail] = tmp;
-//        System.out.println("i=" + i);
+        //        System.out.println("i=" + i);
         return i;
     }
 
@@ -128,16 +124,16 @@ public class BaseSort {
      * 归并排序
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param tail   数组尾
+     * @param head 数组头
+     * @param tail 数组尾
      */
     private void mergeSort(int[] arrays, int head, int tail) {
         if (head >= tail) return;
         int pivot = (head + tail) / 2;
-        //分而治之
+        // 分而治之
         mergeSort(arrays, head, pivot);
         mergeSort(arrays, pivot + 1, tail);
-        //合并
+        // 合并
         merge(arrays, head, pivot, tail);
     }
 
@@ -145,9 +141,9 @@ public class BaseSort {
      * 合并
      *
      * @param arrays 数组
-     * @param head   数组头
-     * @param pivot  数组中间
-     * @param tail   数组尾
+     * @param head 数组头
+     * @param pivot 数组中间
+     * @param tail 数组尾
      */
     private void merge(int[] arrays, int head, int pivot, int tail) {
         System.out.println("head=" + head + ",pivot=" + pivot + "tail=" + tail);
@@ -177,12 +173,11 @@ public class BaseSort {
         }
 
         // 将tmp中的数组拷贝回arrays
-//        for (int i = 0; i <= tail - head; ++i) {
-//            arrays[head + i] = tmp[i];
-//        }
-        //上述代码与下面代码等同，只不过idea有个警告，我就转换了一下
-        if (tail - head + 1 >= 0)
-            System.arraycopy(tmp, 0, arrays, head, tail - head + 1);
+        //        for (int i = 0; i <= tail - head; ++i) {
+        //            arrays[head + i] = tmp[i];
+        //        }
+        // 上述代码与下面代码等同，只不过idea有个警告，我就转换了一下
+        if (tail - head + 1 >= 0) System.arraycopy(tmp, 0, arrays, head, tail - head + 1);
     }
 
     private void printAll(int[] arrays) {

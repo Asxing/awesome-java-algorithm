@@ -1,11 +1,7 @@
 package com.holddie.tmp.linkedList;
 
 /**
- * 1.单链表反转
- * 2.检测环
- * 3.求链表的中间结点
- * 4.删除倒数第k个节点
- * 5.两个有序的链表合并
+ * 1.单链表反转 2.检测环 3.求链表的中间结点 4.删除倒数第k个节点 5.两个有序的链表合并
  *
  * @author mic
  */
@@ -39,8 +35,7 @@ public class LinkedListAlgo {
      * @return
      */
     public boolean checkCircle(Node node) {
-        if (node == null)
-            return false;
+        if (node == null) return false;
         // 快慢指针法
         Node slow = node;
         Node fast = node.next;
@@ -49,8 +44,7 @@ public class LinkedListAlgo {
             fast = fast.next.next;
             slow = slow.next;
 
-            if (slow == fast)
-                return true;
+            if (slow == fast) return true;
         }
         return false;
     }
@@ -62,8 +56,7 @@ public class LinkedListAlgo {
      * @return
      */
     public Node findMiddleByNode(Node node) {
-        if (node == null)
-            return null;
+        if (node == null) return null;
         // 快慢指针法
         Node fast = node.next;
         Node slow = node;
@@ -91,8 +84,7 @@ public class LinkedListAlgo {
             fast = fast.next;
             ++i;
         }
-        if (fast == null)
-            return node;
+        if (fast == null) return node;
         Node slow = node;
         Node prevNode = null;
         while (fast.next != null) {
@@ -117,10 +109,8 @@ public class LinkedListAlgo {
      * @return
      */
     public Node mergeNode(Node pNode, Node qNode) {
-        if (pNode == null)
-            return qNode;
-        if (qNode == null)
-            return pNode;
+        if (pNode == null) return qNode;
+        if (qNode == null) return pNode;
         Node p = pNode;
         Node q = qNode;
         Node resNode = null;
@@ -177,23 +167,23 @@ public class LinkedListAlgo {
         linkedListAlgo.print(qNode);
         Node mergeNode = linkedListAlgo.mergeNode(pNode, qNode);
         linkedListAlgo.print(mergeNode);
-//		Node node = new Node(0, null);
-//		Node node1 = new Node(1, null);
-//		Node node2 = new Node(2, null);
-//		Node node3 = new Node(3, null);
-//		Node node4 = new Node(4, null);
-//		node.next = node1;
-//		node1.next = node2;
-//		node2.next = node3;
-//		node3.next = node4;
-//		linkedListAlgo.print(node);
-//		Node kNode = linkedListAlgo.deleteLastKByNode(node, 4);
-//		linkedListAlgo.print(kNode);
-//		Node midNode = linkedListAlgo.findMiddleByNode(node);
-//		linkedListAlgo.print(midNode);
-//		boolean checkCircle = linkedListAlgo.checkCircle(node);
-//		System.out.println("环检测结果:" + checkCircle);
-//		Node newNode = linkedListAlgo.reverse(node);
-//		linkedListAlgo.print(newNode);
+        //		Node node = new Node(0, null);
+        //		Node node1 = new Node(1, null);
+        //		Node node2 = new Node(2, null);
+        //		Node node3 = new Node(3, null);
+        //		Node node4 = new Node(4, null);
+        //		node.next = node1;
+        //		node1.next = node2;
+        //		node2.next = node3;
+        //		node3.next = node4;
+        //		linkedListAlgo.print(node);
+        //		Node kNode = linkedListAlgo.deleteLastKByNode(node, 4);
+        //		linkedListAlgo.print(kNode);
+        //		Node midNode = linkedListAlgo.findMiddleByNode(node);
+        //		linkedListAlgo.print(midNode);
+        //		boolean checkCircle = linkedListAlgo.checkCircle(node);
+        //		System.out.println("环检测结果:" + checkCircle);
+        //		Node newNode = linkedListAlgo.reverse(node);
+        //		linkedListAlgo.print(newNode);
     }
 }
